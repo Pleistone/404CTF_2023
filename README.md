@@ -1,7 +1,6 @@
 # Write up pour 404CTF 2023
 
 Les sources des challenges sont données dans le [Github du 404CTF 2023](https://github.com/HackademINT/404CTF-2023)
-[85/2335](./404CTF_Score_finale.html) au classement générale
 
 ## Forensics
 - [X] [Intro - pêche au livre](./Forensics/Peche_au_livre/)
