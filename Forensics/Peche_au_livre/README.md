@@ -12,7 +12,7 @@ Justement, vous avez récemment intercepté des communications de Simone Weil, p
 
 Le fichier fourni est une capture réseau, on commence par l'analyser avec le logiciel Wireshark : 
 
-<p align="center"><img src="Echange HTTP.png" alt="Echange HTTP" width="200"></p>
+<p align="center"><img src="Echange HTTP.png" alt="Echange HTTP" width="400"></p>
 
 On constate qu'il s'agit d'un échange HTTP qui a été capturé.
 Ce dernier n'est donc pas chiffré, on extraire le contenu de cet échange, en allant dans le menu `Fichier > Exporter Objets > HTTP`.
@@ -20,7 +20,7 @@ Cette opération permet de récupérer trois images, dont l'une d'entre elles co
 
 <details>
 <summary> Flag 🚩</summary>
+404CTF{345Y_W1r35h4rK}
 
 <p align="center"><img src="./HTTP files/Hegel-sensei-uwu.png" alt="Flag" width="200"></p>
 
-404CTF{345Y_W1r35h4rK}
