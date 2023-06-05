@@ -3,29 +3,29 @@
 ## Enoncé
 Une femme regarde avec hésitation une table à l'autre bout du café Le Procope, au milieu des conversations de fond des habitués. Sur cette table, un ordinateur allumé est laissé à l'abandon.
 
-<p class="text-center"> ARSINOÉ </p>
+<p align="center"> ARSINOÉ </p>
 
-à part
+<p align="center"> à part </p>
 
-Vais-je réellement croissanter mon amie ?
+<p align="center"> Vais-je réellement croissanter mon amie ? </p>
 
-Je m'en voudrais longtemps, même si c'est permis.
+<p align="center"> Je m'en voudrais longtemps, même si c'est permis. </p>
 
-Cela suffit. Il est grand temps que je m'élance.
+<p align="center"> Cela suffit. Il est grand temps que je m'élance. </p>
 
-De Célimène, je vais trahir la confiance.
+<p align="center"> De Célimène, je vais trahir la confiance. </p>
 
-ARSINOÉ
+<p align="center"> ARSINOÉ </p>
 
-prenant les commandes de la machine
+<p align="center"> prenant les commandes de la machine </p>
 
-Il semble que quelques intéressants fichiers
+<p align="center"> Il semble que quelques intéressants fichiers </p>
 
-Soient protégés par quelque magie noire.
+<p align="center"> Soient protégés par quelque magie noire. </p>
 
-Célimène garde vraiment bien ses secrets.
+<p align="center"> Célimène garde vraiment bien ses secrets. </p>
 
-Il va alors falloir capturer sa mémoire.
+<p align="center"> Il va alors falloir capturer sa mémoire. </p>
 
 
 
