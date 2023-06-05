@@ -45,4 +45,14 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 
 On s'aperçoit qu'on est en présence d'une image png, zlib étant la technique utilisée par le format png pour compresser les images. Par conséquent on peut renommer ce fichier restored.png et l'examiner
 
-On obtient une illustration de livre sur un carré blanc. L'énoncé nous indique qu'on cherche un fichier avec du contenu textuel, donc on continue à creuser et on vérifie si l'image ne contient pas de contenu caché avec [stegonline](https://stegonline.georgeom.net/upload). Les résultats de ce site nous font découvrir un QR code caché qu'on peut scanner pour obtenir le contenu textuel recherché.
+<p align="center"><img src="restored.png" alt="restored image" width="600"></p>
+
+On obtient une illustration de livre sur un carré blanc. L'énoncé nous indique qu'on cherche un fichier avec du contenu textuel, donc on continue à creuser et on vérifie si l'image ne contient pas de contenu caché avec [photo-forensics](https://29a.ch/photo-forensics/#error-level-analysis). En effectuant une analyse d'erreur sur ce site, nous pouvons découvrir un QR code caché qu'on peut scanner pour obtenir le contenu textuel recherché.
+
+<p align="center"><img src="HiddenImage.png" alt="Hidden QR code" width="600"></p>
+
+On obtient le message suivant : 
+
+> Il était une fois, dans un village rempli d'amour, deux amoureux qui s'aimaient... Bien joué ! Notre écrivaine va pouvoir reprendre son chef-d'oeuvre grâce à vous ! Voici ce que vous devez rentrer dans la partie "contenu du fichier" du flag : 3n_V01L4_Un_Dr0l3_D3_R0m4N
+
+
