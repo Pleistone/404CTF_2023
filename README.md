@@ -76,7 +76,7 @@
 - [X] [L'Académie du détail](./web/l_academie_du_detail/)
 - [X] [La Vie Française](./web/la_vie_française/)
 - [X] [Fuite en 1791](./web/fuite_en_1791/)
-- [X] [L'Épistolaire moderne](./web/l_epistolaire_moderne/)
+- [ ] [L'Épistolaire moderne](./web/l_epistolaire_moderne/)
 
 ## Web3
 - [ ] [Intro - Art](./web3/art/)
