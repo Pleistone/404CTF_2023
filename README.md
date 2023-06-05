@@ -10,17 +10,30 @@
 - [X] [Intro - Le sot](./cloud/intro_sot/)
 - [ ] [Le cluster de madame Bovary](./cloud/le_cluster_de_madame_de_bovary/)
 
-## Reverse
-- [X] [Intro - Le divin crackme](./reverse/le_divin_crackme/)
-- [X] [L'inspirations en images](./reverse/l_inspiration_en_images/)
-- [X] [Encore une mise à jour !](./reverse/encore_une_mise_a_jour/)
-- [ ] [Introspection](./reverse/introspection/)
+## Crypto
+- [X] [Intro - Recette](./crypto/recette)
+Dessine-moi une courbe elliptique
+Le Jour de l'espace
+ASCON Marchombre
+La Réponse de Voris
+Oracle cassé
+L'énigme du mal-aimé
+Trois
+À la fin de l'envoi, je signe !
 
-## Stegano
-- [X] [Intro - Odobenus Rosmarus](./stegano/odobenus_rosmarus/)
-- [X] [L'oeuvre](./stegano/loeuvre/)
-- [ ] [Les félicitations](./stegano/les_felicitations/)
-- [ ] [En profondeur](./stegano/en_profondeur/)
+## Divers
+
+## Exploitation de binaires
+- [X] [Intro - Je veux la lune !](./pwn/je_veux_la_lune)
+- [ ] [L'Alchimiste](./pwn/l_alchimiste)
+- [X] [Cache-cache : le retour](./pwn/cache_cache_le_retour)
+- [ ] [Un tour de magie](./pwn/un_tour_de_magie)
+
+## Intelligence artificielle
+
+## Programmation
+
+## Radio-fréquences
 
 ## OSINT
 - [X] [Intro - Le tour de France](./osint/intro_le_tour_de_france/)
@@ -34,15 +47,22 @@
 - [ ] [L'âme d'un poète et le cœur d'une femme 3/4](./osint/les_osintables_3/)
 - [ ] [L'âme d'un poète et le cœur d'une femme 4/4](./osint/les_osintables_3/)
 
+## Reverse
+- [X] [Intro - Le divin crackme](./reverse/le_divin_crackme/)
+- [X] [L'inspirations en images](./reverse/l_inspiration_en_images/)
+- [X] [Encore une mise à jour !](./reverse/encore_une_mise_a_jour/)
+- [ ] [Introspection](./reverse/introspection/)
+
+## Stegano
+- [X] [Intro - Odobenus Rosmarus](./stegano/odobenus_rosmarus/)
+- [X] [L'oeuvre](./stegano/loeuvre/)
+- [ ] [Les félicitations](./stegano/les_felicitations/)
+- [ ] [En profondeur](./stegano/en_profondeur/)
+
 ## Hardware
 - [X] [Intro - Un courrier suspect](./hardware/intro_un_courrier_suspect/)
 - [X] [Un réveil difficile](./hardware/un_reveil_difficile/)
 
-## PWN
-- [X] [Intro - Je veux la lune !](./pwn/je_veux_la_lune)
-- [ ] [L'Alchimiste](./pwn/l_alchimiste)
-- [X] [Cache-cache : le retour](./pwn/cache_cache_le_retour)
-- [ ] [Un tour de magie](./pwn/un_tour_de_magie)
+## Web
 
-## Crypto
-- [X] [Intro - Recette](./crypto/recette)
+## Web3
