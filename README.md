@@ -66,6 +66,7 @@
 - [X] [L'oeuvre](./stegano/loeuvre/)
 - [ ] [Les félicitations](./stegano/les_felicitations/)
 - [ ] [En profondeur](./stegano/en_profondeur/)
+- [ ] [Le Rouge et le vert, avec un soupçon de bleu](./stegano/le_rouge_et_le_vert_avec_un_soupcon_de_bleu/)
 
 ## Hardware
 - [X] [Intro - Un courrier suspect](./hardware/intro_un_courrier_suspect/)
