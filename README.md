@@ -12,16 +12,18 @@
 
 ## Crypto
 - [X] [Intro - Recette](./crypto/recette)
-Dessine-moi une courbe elliptique
-Le Jour de l'espace
-ASCON Marchombre
-La Réponse de Voris
-Oracle cassé
-L'énigme du mal-aimé
-Trois
-À la fin de l'envoi, je signe !
+- [X] [Dessine-moi une courbe elliptique](./crypto/dessine_moi_une_courbe_elliptique)
+- [X] [Le Jour de l'espace](./crypto/le_jour_de_l_espace)
+- [X] [ASCON Marchombre](./crypto/ASCON_marchombre)
+- [X] [La Réponse de Voris](./crypto/la_reponse_de_voris)
+- [X] [Oracle cassé](./crypto/oracle_casse)
+- [ ] [L'énigme du mal-aimé](./crypto/l_enigme_du_mal_aime)
+- [ ] [Trois](./crypto/trois)
+- [X] [À la fin de l'envoi, je signe !](./crypto/a_la_fin_de_l_envoi_je_signe)
 
 ## Divers
+- [X] [Discord](./divers/discord)
+- [X] [Désirée Dubois](./divers/desiree_dubois)
 
 ## Exploitation de binaires
 - [X] [Intro - Je veux la lune !](./pwn/je_veux_la_lune)
@@ -30,10 +32,16 @@ Trois
 - [ ] [Un tour de magie](./pwn/un_tour_de_magie)
 
 ## Intelligence artificielle
+- [X] [Intro - De la poésie](./IA/de_la_poesie)
+- [X] [Le Petit Chat](./IA/le_petit_chat)
 
 ## Programmation
+- [X] [Intro - L'Inondation](./programmation/l_inondation)
+- [X] [Des mots, des mots, des mots](./programmation/des_mots_des_mots_des_mots)
 
 ## Radio-fréquences
+- [X] [Intro - Navi](./FM/de_la_poesie)
+- [ ] [Avez-vous vu les cascades du hérisson ?](./FM/avez_vous_vu_les_cascades_du_herisson)
 
 ## OSINT
 - [X] [Intro - Le tour de France](./osint/intro_le_tour_de_france/)
@@ -64,5 +72,13 @@ Trois
 - [X] [Un réveil difficile](./hardware/un_reveil_difficile/)
 
 ## Web
+- [X] [Intro - Le Loup et le renard](./web/le_loup_et_le_renard/)
+- [X] [L'Académie du détail](./web/l_academie_du_detail/)
+- [X] [La Vie Française](./web/la_vie_française/)
+- [X] [Fuite en 1791](./web/fuite_en_1791/)
+- [X] [L'Épistolaire moderne](./web/l_epistolaire_moderne/)
 
 ## Web3
+- [ ] [Intro - Art](./web3/art/)
+- [ ] [L'Antiquaire, tête en l'air](./web3/l_antiquaire_tete_en_l_air/)
+
