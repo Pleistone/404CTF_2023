@@ -18,8 +18,11 @@ On constate qu'il s'agit d'un échange HTTP qui a été capturé.
 Ce dernier n'est donc pas chiffré, on extraire le contenu de cet échange, en allant dans le menu `Fichier > Exporter Objets > HTTP`.
 Cette opération permet de récupérer trois images, dont l'une d'entre elles contient le flag.
 
+## Flag
+
 <details>
 <summary> Flag 🚩</summary>
+
 ```
 404CTF{345Y_W1r35h4rK}
 ```
