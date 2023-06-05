@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)https://ctf.404ctf.fr/user -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.ll-nam{color:#2196f3}.ll-num{color:#ec407a}.ll-str{color:#43a047}.ll-rex{color:#ef6c00}.ll-pct{color:#666}.ll-key{color:#555;font-weight:bold}.ll-com{color:#aaa;font-style:italic}</style>
+  <title>404 CTF</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://ctf.404ctf.fr/files/ecfb382e6a923f2416621f975f873546/favicon.ico" type="image/x-icon">
+
+  
+    <link rel="stylesheet" href="./404 CTF_files/main.e9255463.css">
+  
+
+  
+
+  <script type="text/javascript">
+      window.init = {
+          'urlRoot': "",
+          'csrfNonce': "d203dbdddc256f6839bcb8804d9af4a082fa8077abc91a9992dadd6c8f97270b",
+          'userMode': "users",
+          'userId': 406,
+          'userName': "Pleistone",
+          'userEmail': "pleistone.mage@gmail.com",
+          'teamId': null, 
+          'teamName': null,
+          'start': 1683907200,
+          'end': null,
+          'themeSettings': {"challenge_category_order": "function compare(a, b) {\r\n  if (a \u003c b) {\r\n    return -1;\r\n  }\r\n  if (a \u003e b) {\r\n    return 1;\r\n  }\r\n  return 0;\r\n}", "challenge_order": "function compare(a, b) {\r\n  if (a.id \u003c b.id) {\r\n    return -1;\r\n  }\r\n  if (a.id \u003e b.id) {\r\n    return 1;\r\n  }\r\n  return 0;\r\n}", "challenge_window_size": "lg", "use_builtin_code_highlighter": true},
+          'eventSounds': [
+            "/themes/core/static/sounds/notification.webm",
+            "/themes/core/static/sounds/notification.mp3",
+          ],
+      }
+  </script>
+
+      <style>
+      .code-snippet {
+        font-family: sans-serif;
+        color: #404040;
+        background-color: lightgrey;
+        border-radius: 3px;
+        padding: 2px;
+        transition: color, 500ms;
+      }
+      .code-snippet:hover {
+        cursor: pointer;
+      }
+      .code-snippet.copied {
+        color: lightgrey;
+      }
+      .code-snippet.copied::before {
+        color: #404040;
+        position: absolute;
+        content: "Text copié !";
+      }
+    </style>
+</head>
+<body class="bg-primary" data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed="">
+<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a href="https://ctf.404ctf.fr/" class="navbar-brand">
+      
+        <img class="img-responsive ctf_logo" src="./404 CTF_files/404CTF_Logo.png" alt="404 CTF" height="25">
+      
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="base-navbars">
+      <ul class="navbar-nav me-auto">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.404ctf.fr/prologue">Prologue</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.404ctf.fr/rules">Règlement</a>
+          </li>
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.404ctf.fr/users">Utilisateurs</a>
+          </li>
+
+          
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.404ctf.fr/scoreboard">Classement</a>
+          </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://ctf.404ctf.fr/challenges">Challenges</a>
+        </li>
+      </ul>
+
+      <hr class="d-sm-flex d-md-flex d-lg-none">
+
+      <ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+        
+
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.404ctf.fr/notifications">
+              <span class="d-block" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Notifications" data-bs-original-title="Notifications">
+                <i class="fas fa-bell d-none d-md-block d-lg-none"></i>
+              </span>
+              <span class="d-sm-block d-md-none d-lg-block">
+                  <i class="fas fa-bell pe-1"></i>
+                  <span x-data="" x-show="$store.unread_count &gt; 0" x-text="$store.unread_count" class="badge rounded-pill bg-danger badge-notification" style="display: none;">0</span>
+                  Notifications
+              </span>
+            </a>
+          </li>
+
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.404ctf.fr/user">
+              <span class="d-block" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Profil" data-bs-original-title="Profil">
+                <i class="fas fa-user-circle d-none d-md-block d-lg-none"></i>
+              </span>
+              <span class="d-sm-block d-md-none d-lg-block">
+                <i class="fas fa-user-circle pe-1"></i>Profil
+              </span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.404ctf.fr/settings">
+              <span class="d-block" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Paramètres" data-bs-original-title="Paramètres">
+                <i class="fas fa-cogs d-none d-md-block d-lg-none"></i>
+              </span>
+              <span class="d-sm-block d-md-none d-lg-block">
+                <i class="fas fa-cogs pe-1"></i>Paramètres
+              </span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://ctf.404ctf.fr/logout">
+              <span class="d-block" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Se déconnecter" data-bs-original-title="Se déconnecter">
+                <i class="fas fa-sign-out-alt d-none d-md-block d-lg-none"></i>
+              </span>
+              <span class="d-sm-block d-md-none d-lg-block">
+                <i class="fas fa-sign-out-alt pe-1"></i><span class="d-lg-none">Se déconnecter</span>
+              </span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main role="main" class="bg-primary text-white">
+  
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-1">Pleistone</h1>
+
+      
+
+      <div class="pt-2">
+        
+
+        
+          <h3 class="d-inline-block mx-1">
+            <span class="badge rounded-pill bg-primary">Télécom Nancy</span>
+          </h3>
+        
+
+        
+      </div>
+
+      
+      
+      <div>
+        <h2 class="text-center ft-ubuntu">
+          
+            85èm
+          
+        </h2>
+        <h2 class="text-center ft-ubuntu">
+          
+            20858 <small>points</small>
+          
+        </h2>
+      </div>
+
+      
+    </div>
+  </div>
+  <div class="container">
+    <div>
+  
+    <div class="alert alert-info alert-dismissible text-center" role="alert">
+      <span>L'affichage du score est figé</span>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  
+
+  
+</div>
+
+    
+    
+
+    
+      
+
+      <br>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Challenges résolus</h3>
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <td><b>Challenge</b></td>
+              <td class="d-none d-md-block d-lg-block"><b>Catégorie</b></td>
+              <td><b>Points</b></td>
+              <td><b>Date</b></td>
+            </tr>
+            </thead>
+            <tbody>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#%C3%80%20vos%20plumes%20!-116">
+                    À vos plumes !
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Divers</td>
+                <td>10</td>
+                <td class="solve-time">
+                  <span data-time="2023-06-04T14:07:53.223286Z">June 4th, 4:07:53 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#La%20Qu%C3%AAte%20du%20sens%20[3/3]-64">
+                    La Quête du sens [3/3]
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Renseignement en sources ouvertes</td>
+                <td>979</td>
+                <td class="solve-time">
+                  <span data-time="2023-06-04T09:59:35.388884Z">June 4th, 11:59:35 AM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#La%20Qu%C3%AAte%20du%20sens%20[2/3]-62">
+                    La Quête du sens [2/3]
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Renseignement en sources ouvertes</td>
+                <td>968</td>
+                <td class="solve-time">
+                  <span data-time="2023-06-03T19:59:06.876541Z">June 3rd, 9:59:06 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#La%20Qu%C3%AAte%20du%20sens%20[1/3]-61">
+                    La Quête du sens [1/3]
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Renseignement en sources ouvertes</td>
+                <td>946</td>
+                <td class="solve-time">
+                  <span data-time="2023-06-03T16:49:17.323646Z">June 3rd, 6:49:17 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#%C3%80%20la%20fin%20de%20l&#39;envoi,%20je%20signe%20!-79">
+                    À la fin de l'envoi, je signe !
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Cryptanalyse</td>
+                <td>997</td>
+                <td class="solve-time">
+                  <span data-time="2023-06-02T11:27:14.240234Z">June 2nd, 1:27:14 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Oracle%20cass%C3%A9-54">
+                    Oracle cassé
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Cryptanalyse</td>
+                <td>985</td>
+                <td class="solve-time">
+                  <span data-time="2023-06-01T22:43:35.493481Z">June 2nd, 12:43:35 AM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Cache-cache%20:%20le%20retour-1">
+                    Cache-cache : le retour
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Exploitation de binaires</td>
+                <td>987</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-31T23:21:20.394598Z">June 1st, 1:21:20 AM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Navi-10">
+                    Navi
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Radio-Fréquences</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-30T22:04:52.097095Z">May 31st, 12:04:52 AM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#La%20Vie%20Fran%C3%A7aise-113">
+                    La Vie Française
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Web</td>
+                <td>959</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-30T17:06:47.642604Z">May 30th, 7:06:47 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#D%C3%A9sir%C3%A9e%20Dubois-112">
+                    Désirée Dubois
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Divers</td>
+                <td>948</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-29T16:35:39.321629Z">May 29th, 6:35:39 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Fuite%20en%201791-19">
+                    Fuite en 1791
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Web</td>
+                <td>863</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-28T18:56:14.684687Z">May 28th, 8:56:14 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#L&#39;Inspiration%20en%20images-50">
+                    L'Inspiration en images
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Rétro-ingénierie</td>
+                <td>846</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-27T21:24:32.181737Z">May 27th, 11:24:32 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#ASCON%20Marchombre-114">
+                    ASCON Marchombre
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Cryptanalyse</td>
+                <td>878</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-26T22:13:29.855567Z">May 27th, 12:13:29 AM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Encore%20une%20mise%20%C3%A0%20jour%20!-111">
+                    Encore une mise à jour !
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Rétro-ingénierie</td>
+                <td>908</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-26T06:51:19.832182Z">May 26th, 8:51:19 AM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#L&#39;Acad%C3%A9mie%20du%20d%C3%A9tail-18">
+                    L'Académie du détail
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Web</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-25T22:01:33.180411Z">May 26th, 12:01:33 AM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Le%20Sot-91">
+                    Le Sot
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Cloud</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-25T21:30:05.429802Z">May 25th, 11:30:05 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Un%20vol%20?%20-41">
+                    Un vol ? 
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Renseignement en sources ouvertes</td>
+                <td>798</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-25T17:32:53.654436Z">May 25th, 7:32:53 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#L&#39;%C3%A2me%20d&#39;un%20po%C3%A8te%20et%20le%20coeur%20d&#39;une%20femme%20[2/4]-106">
+                    L'âme d'un poète et le coeur d'une femme [2/4]
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Renseignement en sources ouvertes</td>
+                <td>643</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-25T16:31:40.594479Z">May 25th, 6:31:40 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#L&#39;%C3%A2me%20d&#39;un%20po%C3%A8te%20et%20le%20coeur%20d&#39;une%20femme%20[1/4]-104">
+                    L'âme d'un poète et le coeur d'une femme [1/4]
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Renseignement en sources ouvertes</td>
+                <td>447</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-25T16:24:12.211492Z">May 25th, 6:24:12 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Le%20Myst%C3%A8re%20du%20roman%20d&#39;amour-84">
+                    Le Mystère du roman d'amour
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Analyse forensique</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-25T13:30:38.403474Z">May 25th, 3:30:38 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Dessine-moi%20une%20courbe%20elliptique-24">
+                    Dessine-moi une courbe elliptique
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Cryptanalyse</td>
+                <td>798</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-25T12:02:44.287664Z">May 25th, 2:02:44 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Le%20Petit%20Chat-55">
+                    Le Petit Chat
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Intelligence Artificielle</td>
+                <td>978</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-24T15:25:31.797213Z">May 24th, 5:25:31 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Les%20Myst%C3%A8res%20du%20cluster%20de%20la%20Comtesse%20de%20S%C3%A9gur%20[1/2]-27">
+                    Les Mystères du cluster de la Comtesse de Ségur [1/2]
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Analyse forensique</td>
+                <td>348</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-23T07:41:38.128063Z">May 23rd, 9:41:38 AM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Un%20r%C3%A9veil%20difficile-52">
+                    Un réveil difficile
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Sécurité matérielle</td>
+                <td>734</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-22T20:07:55.382075Z">May 22nd, 10:07:55 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Un%20courrier%20suspect-21">
+                    Un courrier suspect
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Sécurité matérielle</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-21T20:30:07.080271Z">May 21st, 10:30:07 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Le%20Loup%20et%20le%20renard-88">
+                    Le Loup et le renard
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Web</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-21T13:33:18.256238Z">May 21st, 3:33:18 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Le%20Jour%20de%20l&#39;espace-42">
+                    Le Jour de l'espace
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Cryptanalyse</td>
+                <td>874</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-20T22:23:41.862709Z">May 21st, 12:23:41 AM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Le%20Divin%20Crackme-33">
+                    Le Divin Crackme
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Rétro-ingénierie</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-20T17:53:12.653407Z">May 20th, 7:53:12 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Des%20mots,%20des%20mots,%20des%20mots-48">
+                    Des mots, des mots, des mots
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Programmation</td>
+                <td>704</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-20T10:24:03.416721Z">May 20th, 12:24:03 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#L&#39;Inondation-51">
+                    L'Inondation
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Programmation</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-19T21:53:07.141824Z">May 19th, 11:53:07 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#De%20la%20po%C3%A9sie-93">
+                    De la poésie
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Intelligence Artificielle</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-19T14:08:05.176179Z">May 19th, 4:08:05 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Je%20veux%20la%20lune%20!-13">
+                    Je veux la lune !
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Exploitation de binaires</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-19T09:45:45.434099Z">May 19th, 11:45:45 AM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Discord-92">
+                    Discord
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Divers</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-19T09:07:44.944074Z">May 19th, 11:07:44 AM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Les%20OSINTables%20[1/3]-72">
+                    Les OSINTables [1/3]
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Renseignement en sources ouvertes</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-19T06:36:20.653285Z">May 19th, 8:36:20 AM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#La%20R%C3%A9ponse%20de%20Voris-43">
+                    La Réponse de Voris
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Cryptanalyse</td>
+                <td>960</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-18T23:35:29.141217Z">May 19th, 1:35:29 AM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Exemple%20de%20connexion%20distante-87">
+                    Exemple de connexion distante
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Divers</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-18T13:40:30.459713Z">May 18th, 3:40:30 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#L&#39;%C5%92uvre-37">
+                    L'Œuvre
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Stéganographie</td>
+                <td>200</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-18T12:48:32.045284Z">May 18th, 2:48:32 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Odobenus%20Rosmarus-45">
+                    Odobenus Rosmarus
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Stéganographie</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-18T12:28:14.878624Z">May 18th, 2:28:14 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Le%20Tour%20de%20France-85">
+                    Le Tour de France
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Renseignement en sources ouvertes</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-18T11:59:49.238773Z">May 18th, 1:59:49 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Recette-11">
+                    Recette
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Cryptanalyse</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-18T11:09:01.656769Z">May 18th, 1:09:01 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#P%C3%AAche%20au%20livre-32">
+                    Pêche au livre
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Analyse forensique</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-18T10:47:53.946202Z">May 18th, 12:47:53 PM</span>
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  <a href="https://ctf.404ctf.fr/challenges#Bienvenue%20!-3">
+                    Bienvenue !
+                  </a>
+                </td>
+                <td class="d-none d-md-block d-lg-block">Divers</td>
+                <td>100</td>
+                <td class="solve-time">
+                  <span data-time="2023-05-18T10:02:37.553311Z">May 18th, 12:02:37 PM</span>
+                </td>
+              </tr>
+            
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="row" x-data="UserGraphs">
+        <div class="col-md-6 d-none d-md-block d-lg-block py-4">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" :style="{ width: `${getSolvePercentage()}%`, &#39;background-color&#39;: &#39;rgb(0, 209, 64)&#39; }" style="width: 23%; background-color: rgb(0, 209, 64);">
+            </div>
+            <div class="progress-bar" role="progressbar" :style="{ width: `${getFailPercentage()}%`, &#39;background-color&#39;: &#39;rgb(207, 38, 0)&#39; }" style="width: 77%; background-color: rgb(207, 38, 0);">
+            </div>
+          </div>
+          <div class="ps-2 float-start">
+            <svg height="16" width="16">
+              <circle cx="8" cy="8" r="5" fill="rgb(0, 209, 64)"></circle>
+            </svg>
+            <small x-text="`Soumissions valides (${getSolvePercentage()}%)`">Soumissions valides (23%)</small>
+          </div>
+          <div class="ps-2 float-start">
+            <svg height="16" width="16">
+              <circle cx="8" cy="8" r="5" fill="rgb(207, 38, 0)"></circle>
+            </svg>
+            <small x-text="`Soumissions erronnées (${getFailPercentage()}%)`">Soumissions erronnées (77%)</small>
+          </div>
+        </div>
+        <div class="col-md-6 d-none d-md-block d-lg-block py-4">
+          <div class="progress">
+            <template x-for="category in getCategoryBreakdown()" :key="category.name"></template><div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, &#39;background-color&#39;: category.color }" style="width: 11.9%; background-color: rgb(4, 205, 74);">
+              </div><div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, &#39;background-color&#39;: category.color }" style="width: 19.05%; background-color: rgb(179, 77, 26);">
+              </div><div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, &#39;background-color&#39;: category.color }" style="width: 16.67%; background-color: rgb(23, 207, 38);">
+              </div><div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, &#39;background-color&#39;: category.color }" style="width: 4.76%; background-color: rgb(64, 231, 226);">
+              </div><div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, &#39;background-color&#39;: category.color }" style="width: 2.38%; background-color: rgb(11, 63, 218);">
+              </div><div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, &#39;background-color&#39;: category.color }" style="width: 9.52%; background-color: rgb(188, 239, 46);">
+              </div><div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, &#39;background-color&#39;: category.color }" style="width: 7.14%; background-color: rgb(181, 231, 64);">
+              </div><div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, &#39;background-color&#39;: category.color }" style="width: 2.38%; background-color: rgb(36, 235, 211);">
+              </div><div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, &#39;background-color&#39;: category.color }" style="width: 7.14%; background-color: rgb(48, 188, 248);">
+              </div><div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, &#39;background-color&#39;: category.color }" style="width: 4.76%; background-color: rgb(93, 35, 251);">
+              </div><div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, &#39;background-color&#39;: category.color }" style="width: 4.76%; background-color: rgb(133, 218, 7);">
+              </div><div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, &#39;background-color&#39;: category.color }" style="width: 4.76%; background-color: rgb(239, 46, 188);">
+              </div><div class="progress-bar" role="progressbar" :style="{ width: `${category.percent}%`, &#39;background-color&#39;: category.color }" style="width: 4.76%; background-color: rgb(206, 250, 10);">
+              </div>
+          </div>
+          <template x-for="category in getCategoryBreakdown()" :key="category.name"></template><div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" fill="hsl(141, 96%, 41%)"></circle>
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`">Divers (11.90%)</small>
+            </div><div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" fill="hsl(20, 75%, 40%)"></circle>
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`">Renseignement en sources ouvertes (19.05%)</small>
+            </div><div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" fill="hsl(125, 80%, 45%)"></circle>
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`">Cryptanalyse (16.67%)</small>
+            </div><div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" fill="hsl(178, 78%, 58%)"></circle>
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`">Exploitation de binaires (4.76%)</small>
+            </div><div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" fill="hsl(225, 90%, 45%)"></circle>
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`">Radio-Fréquences (2.38%)</small>
+            </div><div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" fill="hsl(76, 86%, 56%)"></circle>
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`">Web (9.52%)</small>
+            </div><div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" fill="hsl(78, 78%, 58%)"></circle>
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`">Rétro-ingénierie (7.14%)</small>
+            </div><div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" fill="hsl(173, 83%, 53%)"></circle>
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`">Cloud (2.38%)</small>
+            </div><div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" fill="hsl(198, 93%, 58%)"></circle>
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`">Analyse forensique (7.14%)</small>
+            </div><div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" fill="hsl(256, 96%, 56%)"></circle>
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`">Intelligence Artificielle (4.76%)</small>
+            </div><div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" fill="hsl(84, 94%, 44%)"></circle>
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`">Sécurité matérielle (4.76%)</small>
+            </div><div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" fill="hsl(316, 86%, 56%)"></circle>
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`">Programmation (4.76%)</small>
+            </div><div class="ps-2 float-start">
+              <svg height="16" width="16">
+                <circle cx="8" cy="8" r="5" :fill="category.color" fill="hsl(71, 96%, 51%)"></circle>
+              </svg>
+              <small x-text="`${category.name} (${category.percent}%)`">Stéganographie (4.76%)</small>
+            </div>
+        </div>
+        <br class="clearfix">
+        <div class="col-md-12 d-none d-md-block d-lg-block py-4">
+          <div id="score-graph" x-ref="scoregraph" class="w-100 d-flex align-items-center" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1685951770537"><div style="position: relative; width: 1296px; height: 400px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="1458" height="450" style="position: absolute; left: 0px; top: 0px; width: 1296px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+        </div>
+      </div>
+    
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container text-center">
+    <a href="https://ctfd.io/" class="text-secondary">
+      <small class="text-muted">Basé sur CTFd | Thème par Artamis</small>
+    </a>
+  </div>
+</footer>
+
+<div x-data="">
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto" x-text="$store.toast.title"></strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" x-html="$store.toast.html"></div>
+    </div>
+  </div>
+</div>
+
+
+<div x-data="">
+  <div class="modal" x-ref="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" x-text="$store.modal.title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p x-html="$store.modal.html"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script defer="" type="module" src="./404 CTF_files/index.bc4bd6df.js.téléchargement"></script><script defer="" type="module" src="./404 CTF_files/userscore.3cfe3e53.js.téléchargement"></script><script defer="" type="module" src="./404 CTF_files/index.efd7a05a.js.téléchargement"></script><script defer="" type="module" src="./404 CTF_files/echarts.4e3892c6.js.téléchargement"></script><script defer="" type="module" src="./404 CTF_files/users_private.3ecc71a5.js.téléchargement"></script>
+
+
+
+
+<script>
+      const copyToClipboard = str => {
+        // Credit to Natesh bhat
+        // https://stackoverflow.com/questions/45071353/copy-text-string-on-click/53977796#53977796
+        const el = document.createElement('textarea');
+        el.value = str;
+        el.setAttribute('readonly', '');
+        el.style.position = 'absolute';
+        el.style.left = '-9999px';
+        document.body.appendChild(el);
+        const selected =
+          document.getSelection().rangeCount > 0
+            ? document.getSelection().getRangeAt(0)
+            : false;
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        if (selected) {
+          document.getSelection().removeAllRanges();
+          document.getSelection().addRange(selected);
+        }
+      };
+      document.querySelectorAll(".code-snippet").forEach(e => {
+        e.onclick = () => {
+          copyToClipboard(e.textContent);
+          e.classList.add("copied");
+          setTimeout(() => e.classList.remove('copied'), 1000);
+        }
+      })
+    </script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+  div.grammarly-desktop-integration {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  div.grammarly-desktop-integration:before {
+    content: attr(data-content);
+  }
+</style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
