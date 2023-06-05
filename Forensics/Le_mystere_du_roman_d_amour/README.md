@@ -22,3 +22,24 @@ Format du flag : `404CTF{PidDuProcessusCrashé-chemin/vers le/fichier-nomUser-no
 
 ## Solution
 
+En analysant le fichier fourni, on commence par utiliser la commande `file` qui nous donne les informations suivantes : 
+
+```bash
+ $ file fichier-etrange.swp
+fichier-etrange.swp: Vim swap file, version 7.4, pid 168, user jaqueline, host aime_ecrire, file ~jaqueline/Documents/Livres/404 Histoires d'Amour pour les bibliophiles au coeur d'artichaut/brouillon.txt
+```
+
+On récupère déjà la plupart des informations, stockées directement dans les métadonnées du fichier swap de Vim. Il ne reste alors plus qu'à retrouver son contenu.
+
+Pour ce faire, on peut utiliser la commande `vim -r fichier-etrange.swp`. Cela nous donnera un prompt nous confirmant que le fichier a bien été restoré. On peut ensuite sauvegarder le fihcier restoré avec la commande `:w restored.bin`.
+
+Une fois le fichier restoré, on l'analyse à nouveau avec la commande `binwalk` : 
+
+```bash
+binwalk restored.bin
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 1932 x 1932, 8-bit/color RGBA, non-interlaced
+41            0x29            Zlib compressed data, compressed
+```
+
