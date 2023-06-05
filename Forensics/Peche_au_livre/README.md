@@ -20,7 +20,7 @@ Cette opération permet de récupérer trois images, dont l'une d'entre elles co
 
 <details>
 <summary> Flag 🚩</summary>
-404CTF{345Y_W1r35h4rK}
+`404CTF{345Y_W1r35h4rK}`
 
 <p align="center"><img src="./HTTP files/Hegel-sensei-uwu.png" alt="Flag" width="200"></p>
 
