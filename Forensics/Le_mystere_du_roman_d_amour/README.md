@@ -51,9 +51,11 @@ On obtient une illustration de livre sur un carré blanc. L'énoncé nous indiqu
 
 <p align="center"><img src="HiddenImage.png" alt="Hidden QR code" width="200"></p>
 
-<summary>On obtient le message suivant : </summary>
+On obtient le message suivant :
 > Il était une fois, dans un village rempli d'amour, deux amoureux qui s'aimaient... Bien joué !
-Notre écrivaine va pouvoir reprendre son chef-d'oeuvre grâce à vous !
-Voici ce que vous devez rentrer dans la partie "contenu du fichier" du flag : 3n_V01L4_Un_Dr0l3_D3_R0m4N
+> Notre écrivaine va pouvoir reprendre son chef-d'oeuvre grâce à vous !
+> Voici ce que vous devez rentrer dans la partie "contenu du fichier" du flag : 3n_V01L4_Un_Dr0l3_D3_R0m4N
 
-
+<details>
+<summary> Flag 🚩</summary>
+404CTF{168-~jaqueline/Documents/Livres/404 Histoires d'Amour pour les bibliophiles au coeur d'artichaut/brouillon.txt-jaqueline-aime_ecrire-3n_V01L4_Un_Dr0l3_D3_R0m4N}
