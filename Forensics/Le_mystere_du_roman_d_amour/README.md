@@ -33,13 +33,16 @@ On récupère déjà la plupart des informations, stockées directement dans les
 
 Pour ce faire, on peut utiliser la commande `vim -r fichier-etrange.swp`. Cela nous donnera un prompt nous confirmant que le fichier a bien été restoré. On peut ensuite sauvegarder le fihcier restoré avec la commande `:w restored.bin`.
 
-Une fois le fichier restoré, on l'analyse à nouveau avec la commande `binwalk` : 
+Une fois le fichier restoré, on l'analyse avec la commande `binwalk` : 
 
 ```bash
-binwalk restored.bin
+ $ binwalk restored.bin
 DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
 0             0x0             PNG image, 1932 x 1932, 8-bit/color RGBA, non-interlaced
 41            0x29            Zlib compressed data, compressed
 ```
 
+On s'aperçoit qu'on est en présence d'une image png, zlib étant la technique utilisée par le format png pour compresser les images. Par conséquent on peut renommer ce fichier restored.png et l'examiner
+
+On obtient une illustration de livre sur un carré blanc. L'énoncé nous indique qu'on cherche un fichier avec du contenu textuel, donc on continue à creuser et on vérifie si l'image ne contient pas de contenu caché avec [stegonline](https://stegonline.georgeom.net/upload). Les résultats de ce site nous font découvrir un QR code caché qu'on peut scanner pour obtenir le contenu textuel recherché.
