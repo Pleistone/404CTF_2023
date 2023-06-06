@@ -41,9 +41,9 @@ On peut tenté de le décompresser, mais un mot de passe est requit. Pour obteni
 
 On poursuit nos investigations, on fini par découvrir un dossier nommé "jumpbag". Après des recherches sur Internet, on apprend que ce dossier sert à dump la ram. On y trouve un fichier .raw. On analyse le dump mémoire avec volatility. On commencé par exécuter la commande "volatility -f C311M1N1-PC-20230514-200525.raw imageinfo" pour obtenir diverses informations sur la machine.
 
-<p align="center"><img src="" alt="Volatility imageinfo" width="300"></p>
+<p align="center"><img src="Volatility imageinfo.png" alt="Volatility imageinfo" width="300"></p>
 
-Après une première exploration du contenu du dump mémoire, on s'interroge sur ou on pourrait trouver un mot de passe. Après réflexion, on envisage qu'il se trouve dans le presse-papiers, étant donné notre tendance à copier-coller des mots de passe. Pour extraire le contenu du presse-papiers, on utilise la commande suivante : `volatility -f C311M1N1-PC-20230514-200525.raw --profile Win7SP1 clipboard`. Eureka on y trouve bien le mot de passe du zip : `Z1p p4s5wOrd : F3eMoBon8n3GD5xQ`.
+Après une première exploration du contenu du dump mémoire, on s'interroge sur ou on pourrait trouver un mot de passe. Après réflexion, on envisage qu'il se trouve dans le presse-papiers, étant donné notre tendance à copier-coller des mots de passe. Pour extraire le contenu du presse-papiers, on utilise la commande suivante : `volatility -f C311M1N1-PC-20230514-200525.raw --profile Win7SP1 clipboard`. Eurêka, on y trouve bien le mot de passe du zip : `Z1p p4s5wOrd : F3eMoBon8n3GD5xQ`.
 
 On décompresse le zip avec la commande `7z x s3cr37.zip` puis le mot de passe, on ne peut pas utiliser la commande unzip ici, car elle ne supporte pas les clés AES.
 Le zip contient un pdf dans lequel on trouve le flag.
