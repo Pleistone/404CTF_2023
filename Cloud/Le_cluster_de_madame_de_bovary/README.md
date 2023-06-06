@@ -8,7 +8,7 @@ Votre mission consiste à prendre le contrôle du cluster Kubernetes de Madame B
 Le fichier fourni est une machine virtuelle à charger dans Virtualbox. Cette machine virtuelle contient le cluster Kubernetes du challenge.
 
 > Utilisateur : ctf
-
+>
 > Mot de passe : 404ctf2023
 
 
