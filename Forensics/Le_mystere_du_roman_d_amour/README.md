@@ -47,7 +47,7 @@ On s'aperçoit qu'on est en présence d'une image png, zlib étant la technique 
 
 <p align="center"><img src="restored.png" alt="restored image" width="200"></p>
 
-On obtient une illustration de livre sur un carré blanc. L'énoncé nous indique qu'on cherche un fichier avec du contenu textuel, donc on continue à creuser et on vérifie si l'image ne contient pas de contenu caché avec [photo-forensics](https://29a.ch/photo-forensics/#error-level-analysis). En effectuant une analyse d'erreur sur ce site, nous pouvons découvrir un QR code caché qu'on peut scanner pour obtenir le contenu textuel recherché.
+On obtient une illustration de livre sur un carré blanc. L'énoncé nous indique qu'on cherche un fichier avec du contenu textuel, donc on continue à creuser et on vérifie si l'image ne contient pas de contenu caché avec [photo-forensics](https://29a.ch/photo-forensics/#error-level-analysis). En effectuant une analyse d'erreur, nous pouvons découvrir un QR code caché qu'on peut scanner pour obtenir le contenu textuel recherché.
 
 <p align="center"><img src="HiddenImage.png" alt="Hidden QR code" width="200"></p>
 

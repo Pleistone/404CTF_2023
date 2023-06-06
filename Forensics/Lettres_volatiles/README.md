@@ -31,21 +31,22 @@ Une femme regarde avec hésitation une table à l'autre bout du café Le Procope
 
 ## Solution
 
-Le titre de l'énoncé annonce l'aise entre que l'on vas utiliser volatility. Comme on nous indique que les données que l'on cherche sont des données utilisateur, on s'attend à trouver un dump mémoire dans le système de fichier, car on parle d'une capture de mémoire.
+Dans l'énoncé, il est spécifié que les données recherchées sont des données utilisateur, et il est également fait référence une capture mémoire. De plus, le titre de l'énoncé suggère l'utilisation de Volatility. Par conséquent, on peut s'attendre à trouver un dump mémoire dans le fichier zip fournit.
 
-Comme on cherche des données utilisateur, on va dans des répertoires bien connus comme notamment Images, Téléchargements, Documents,...
-Dans Images, on trouve le magnifique logo, et un png d'un drapeau, après analyse l'image ne semble rien contenir de particulier.
-On fini par trouver un fichier `s3cr37.zip` dans le dossier /documents/perso.
+Comme on cherche des données utilisateur, on va dans des répertoires classiques comme Images, Téléchargements, Documents...
+Dans Images, ont un png de drapeau, après analyse l'image ne semble rien contenir de particulier.
+En continuant les recherches, on fini par trouver un fichier `s3cr37.zip` dans le dossier /documents/perso.
 
-On essaye de le décompresser, mais il requiert un mot de passe. On peut obtenir plus d'information sur le zip avec la commande `zipdetails s3cr37.zip` on vois qu'il est chiffré avec une clé AES, on a donc peu de chances de pouvoir la cassé. On peut néanmoins essayer avec `fcrackzip -v -D -p rockyou.txt -u s3cr37.zip`, mais ce n'est pas concluant.
+On peut tenté de le décompresser, mais un mot de passe est requit. Pour obtenir plus d'informations sur le fichier zip, on utilise la commande `zipdetails s3cr37.zip`. Cette commande nous révélé que le fichier est chiffré avec une clé AES, ce qui rend peu probable notre nos chances de casser la clé. Néanmoins, on peut essayé avec la commande "fcrackzip -v -D -p rockyou.txt -u s3cr37.zip", mais cela n'abouti à rien. 
 
-On reprend nos recherches et on trouve un dossier jumpbag qui après des recherches sur Internet, on apprend sert à dump la ram. On y trouve un fichier .raw.
-On analyse le dump mémoire avec volatility, on commence avec la commande `vol2 -f C311M1N1-PC-20230514-200525.raw imageinfo` pour récupère diverses informations sur la machine.
-Après avoir regardé un peu ce que contient le dump on se demande où pourrais se trouver un mot de passe, on se dit quoi pourrait être dans le presse-papiers, car on a tendance à copier-coller des mots de passe, pour récupère le contenu du clipboard on entre la commande suivante `vol2 -f imageinfo vol2 -f --profile Win7SP1 clipboard`.
-On y trouve le mot de passe du zip : `Z1p p4s5wOrd : F3eMoBon8n3GD5xQ`.
+On poursuit nos investigations, on fini par découvrir un dossier nommé "jumpbag". Après des recherches sur Internet, on apprend que ce dossier sert à dump la ram. On y trouve un fichier .raw. On analyse le dump mémoire avec volatility. On commencé par exécuter la commande "volatility -f C311M1N1-PC-20230514-200525.raw imageinfo" pour obtenir diverses informations sur la machine.
 
-On ouvre le zip avec la commande `7z x s3cr37.zip` (on est obligé d'utiliser cette commande, car la commande zip ne supporte pas les clés AES).
-Il contient un pdf dans lequel on trouve le flag
+<p align="center"><img src="" alt="Volatility imageinfo" width="300"></p>
+
+Après une première exploration du contenu du dump mémoire, on s'interroge sur ou on pourrait trouver un mot de passe. Après réflexion, on envisage qu'il se trouve dans le presse-papiers, étant donné notre tendance à copier-coller des mots de passe. Pour extraire le contenu du presse-papiers, on utilise la commande suivante : `volatility -f C311M1N1-PC-20230514-200525.raw --profile Win7SP1 clipboard`. Eureka on y trouve bien le mot de passe du zip : `Z1p p4s5wOrd : F3eMoBon8n3GD5xQ`.
+
+On décompresse le zip avec la commande `7z x s3cr37.zip` puis le mot de passe, on ne peut pas utiliser la commande unzip ici, car elle ne supporte pas les clés AES.
+Le zip contient un pdf dans lequel on trouve le flag.
 
 ## Flag
 

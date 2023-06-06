@@ -9,7 +9,7 @@ La Comtesse vous demande d'enquêter sur la manière dont le maître chanteur a 
 
 
 ## Solution
-On commence par décompresser le fichier zip fourni, puis nous parcourons les fichiers de l'archive dans l'objectif de comprendre comment le maître chanteur a pu voler les livres. Notre attention se porte sur le fichier `io.kubernetes.cri-o.LogPath`, qui pourrait contenir des logs qui permettraient de comprendre ce qui c'est passé. Au cours de notre exploration de ce fichier, nous tombons sur une section où des outils de piratage sont installés, notamment [carlospolop](https://github.com/sponsors/carlospolop). Il semble donc que nous soyons sur la bonne piste.
+On commence par décompresser le fichier zip fourni, puis nous parcourons les fichiers de l'archive dans l'objectif de comprendre comment le maître chanteur a pu voler les livres. Notre attention se porte sur le fichier `io.kubernetes.cri-o.LogPath`, qui pourrait contenir des logs qui permettraient de comprendre ce qui c'est passé. Au cours de notre exploration de ce fichier, nous tombons sur une section où des outils de piratage sont installés, à partir du github de [carlospolop](https://github.com/sponsors/carlospolop). Il semble donc que nous soyons sur la bonne piste.
 
 <p align="center"><img src="Hacking Tools.png" alt="Hacking Tools" width="800"></p>
 
