@@ -43,9 +43,7 @@ On poursuit nos investigations, on fini par découvrir un dossier nommé "jumpba
 
 <p align="center"><img src="Volatility imageinfo.png" alt="Volatility imageinfo" width="800"></p>
 
-`volatility -f C311M1N1-PC-20230514-200525.raw pslist`
-
-On regarde les différents processus contenu du dump mémoire avec la commande `volatility -f C311M1N1-PC-20230514-200525.raw pslist`, et on s'interroge sur ou on pourrait trouver un mot de passe.
+On regarde les différents processus contenus du dump mémoire avec la commande `volatility -f C311M1N1-PC-20230514-200525.raw pslist`, et on s'interroge sur ou on pourrait trouver un mot de passe.
 
 <p align="center"><img src="Volatility processus.png" alt="Volatility processus" width="800"></p>
 
