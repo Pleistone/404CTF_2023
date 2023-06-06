@@ -35,7 +35,7 @@ Dans l'énoncé, il est spécifié que les données recherchées sont des donné
 
 Comme on cherche des données utilisateur, on va dans des répertoires classiques comme Images, Téléchargements, Documents...
 Dans Images, ont un png de drapeau, après analyse l'image ne semble rien contenir de particulier.
-En continuant les recherches, on fini par trouver un fichier `s3cr37.zip` dans le dossier /documents/perso.
+En continuant les recherches, on fini par trouver un fichier s3cr37.zip dans le dossier /documents/perso.
 
 On peut tenté de le décompresser, mais un mot de passe est requit. Pour obtenir plus d'informations sur le fichier zip, on utilise la commande `zipdetails s3cr37.zip`. Cette commande nous révélé que le fichier est chiffré avec une clé AES, ce qui rend peu probable notre nos chances de casser la clé. Néanmoins, on peut essayé avec la commande `fcrackzip -v -D -p rockyou.txt -u s3cr37.zip`, mais cela n'abouti à rien. 
 
@@ -43,7 +43,7 @@ On poursuit nos investigations, on fini par découvrir un dossier nommé "jumpba
 
 <p align="center"><img src="Volatility imageinfo.png" alt="Volatility imageinfo" width="300"></p>
 
-Après une première exploration du contenu du dump mémoire, on s'interroge sur ou on pourrait trouver un mot de passe. Après réflexion, on envisage qu'il se trouve dans le presse-papiers, étant donné notre tendance à copier-coller des mots de passe. Pour extraire le contenu du presse-papiers, on utilise la commande suivante : `volatility -f C311M1N1-PC-20230514-200525.raw --profile Win7SP1 clipboard`. Eurêka, on y trouve bien le mot de passe du zip : `Z1p p4s5wOrd : F3eMoBon8n3GD5xQ`.
+Après une première exploration du contenu du dump mémoire, on s'interroge sur ou on pourrait trouver un mot de passe. Après réflexion, on envisage qu'il se trouve dans le presse-papiers, étant donné notre tendance à copier-coller des mots de passe. Pour extraire le contenu du presse-papiers, on utilise la commande suivante : `volatility -f C311M1N1-PC-20230514-200525.raw --profile Win7SP1 clipboard`. Eurêka, on y trouve bien le mot de passe du zip : Z1p p4s5wOrd : F3eMoBon8n3GD5xQ.
 
 On décompresse le zip avec la commande `7z x s3cr37.zip` puis le mot de passe, on ne peut pas utiliser la commande unzip ici, car elle ne supporte pas les clés AES.
 Le zip contient un pdf dans lequel on trouve le flag.
