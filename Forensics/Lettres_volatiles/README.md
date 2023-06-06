@@ -43,11 +43,11 @@ On poursuit nos investigations, on fini par découvrir un dossier nommé "jumpba
 
 <p align="center"><img src="Volatility imageinfo.png" alt="Volatility imageinfo" width="800"></p>
 
-On regarde les différents processus contenus du dump mémoire avec la commande `volatility -f C311M1N1-PC-20230514-200525.raw pslist`, et on s'interroge sur ou on pourrait trouver un mot de passe.
+On regarde les différents processus contenus du dump mémoire avec la commande `volatility -f C311M1N1-PC-20230514-200525.raw --profile Win7SP1x64 pslist` et on s'interroge sur ou on pourrait trouver un mot de passe.
 
 <p align="center"><img src="Volatility processus.png" alt="Volatility processus" width="800"></p>
 
- Après réflexion, on envisage qu'il se trouve dans le presse-papiers, étant donné notre tendance à copier-coller des mots de passe. Pour extraire le contenu du presse-papiers, on utilise la commande suivante : `volatility -f C311M1N1-PC-20230514-200525.raw --profile Win7SP1 clipboard`. Eurêka, on y trouve bien le mot de passe du zip : Z1p p4s5wOrd : F3eMoBon8n3GD5xQ.
+ Après réflexion, on envisage qu'il se trouve dans le presse-papiers, étant donné notre tendance à copier-coller des mots de passe. Pour extraire le contenu du presse-papiers, on utilise la commande suivante : `volatility -f C311M1N1-PC-20230514-200525.raw --profile Win7SP1x64 clipboard`. Eurêka, on y trouve bien le mot de passe du zip : Z1p p4s5wOrd : F3eMoBon8n3GD5xQ.
 
 On décompresse le zip avec la commande `7z x s3cr37.zip` puis le mot de passe, on ne peut pas utiliser la commande unzip ici, car elle ne supporte pas les clés AES.
 Le zip contient un pdf dans lequel on trouve le flag.
