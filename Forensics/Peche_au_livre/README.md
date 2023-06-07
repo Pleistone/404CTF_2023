@@ -15,7 +15,7 @@ Le fichier fourni est une capture réseau, on commence par l'analyser avec le lo
 <p align="center"><img src="Echange HTTP.png" alt="Echange HTTP" width="500"></p>
 
 On constate qu'il s'agit d'un échange HTTP qui a été capturé.
-Ce dernier n'est donc pas chiffré, on extraire le contenu de cet échange, en allant dans le menu `Fichier > Exporter Objets > HTTP`.
+Ce dernier n'est donc pas chiffré, on peut ainsi extraire le contenu de cet échange, en allant dans le menu `Fichier > Exporter Objets > HTTP`.
 Cette opération permet de récupérer trois images, dont l'une d'entre elles contient le flag.
 
 ## Flag

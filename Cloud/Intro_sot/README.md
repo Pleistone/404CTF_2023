@@ -13,11 +13,9 @@ Dans un coin reculé du café est assis Panurge, la mine sombre. Prenant pitié,
 
 Allons, vous avez bon coeur n'est-ce pas ? Allez donc lui retrouver ses moutons.
 
-- Endpoint S3 : https://s3.gra.io.cloud.ovh.net/
-
-- Bucket : cloud-intro-challenge
-
-- Attention, il s'agit d'une vrai infrastructure cloud, le brute-force est particulièrement proscrit
+- Endpoint S3 : https://s3.gra.io.cloud.ovh.net/    \
+- Bucket : cloud-intro-challenge    \
+- Attention, il s'agit d'une vrai infrastructure cloud, le brute-force est particulièrement proscrit    \
 
 
 ## Solution
