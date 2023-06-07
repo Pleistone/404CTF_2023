@@ -110,6 +110,8 @@ Forwarding [::1]:8080 -> 8080
 
 10. On peut désormais faire une requête sur l'url `http://localhost:8080` a l'aide Curl ou d'un navigateur. On arrive sur une page web sur la quel se trouve le message "Le drapeau est dans /flag". On vas donc sur la page `http://localhost:8080/flag` et la on trouve la fin du flag qui est "erte_de_k8s}".
 
+<p align="center"><img src="la fin du flag.png" alt="La fin du flag" width="750"></p>
+
 ## Flag
 
 <details>
