@@ -14,6 +14,15 @@ Le fichier fourni est une machine virtuelle à charger dans Virtualbox. Cette ma
 
 ## Solution
 
+Après lecture de l'énoncé, il est clair que l'on doit extraire des informations contenues dans le cluster Kubernetes. À noter qu'un cluster est un ensemble de noeuds (machines virtuelles ou physiques) interconnectés qui exécutent des applications conteneurisées. Sur chaque noeud on trouve des groupes d'un ou plusieurs conteneurs qui sont gérés et exécutés ensemble, ces groupes sont appelés pod. De plus le nom "cluster Kubernetes" nous fait comprendre que l'on va probablement avoir à faire un cluster de type Kubernetes. 
+
+On déploie donc la machine virtuelle avec Virtualbox, puis on commence par lister les pods disponibles. Pour ce faire, on ouvre un terminal sur la machine virtuelle et exécute la commande `kubectl get pods`, ce qui nous donne les informations suivantes :
+
+```
+$ kubectl get pods
+```
+
+
 
 
 ## Flag
