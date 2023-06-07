@@ -22,5 +22,5 @@ Le fichier fourni est une machine virtuelle à charger dans Virtualbox. Cette ma
 <summary> Flag 🚩</summary>
 
 ```
-404CTF{D35_m0utOns_D4n5_13s_NU@g3s}
+404CTF{A_la_decouverte_de_k8s}
 ```
