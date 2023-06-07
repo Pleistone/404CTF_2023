@@ -91,7 +91,7 @@ $ kubectl get pods
 NAME                               READY   STATUS    RESTARTS         AGE
 agent                              1/1     Running   2 (10m25s ago)   48d
 the-container-64f84f898-pwmr6      1/1     Running   0                7min46s
-web-server-8465698799-kz7sj        0/1     Running   0                22s
+web-server-8465698799-kz7sj        1/1     Running   0                22s
 
 $ kubectl logs web-server-8465698799-kz7sj
 Starting serveur at port 8080
