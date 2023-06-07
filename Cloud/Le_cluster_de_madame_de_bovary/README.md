@@ -50,7 +50,7 @@ $ kubectl logs the-container-64f84f898-pwmr6
 err: not in namespace 404ctf
 ```
 
-5. On remarque qu'il y a une erreur sur le conteneur que l'on a déployé pour la résoudre, il faut redéployer le conteneur dans le namespace 404ctf. On crée donc le namespace "404ctf".
+5. On remarque qu'il y a une erreur sur le conteneur que l'on a déployé pour la résoudre, il faut redéployer le conteneur dans le namespace "404ctf". On crée donc le namespace "404ctf".
 Puis on reprend à partir de l'étape 3, mais on ajoute l'option `--namespace=404ctf`.
 
 ```
