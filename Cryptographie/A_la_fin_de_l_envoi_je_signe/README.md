@@ -15,12 +15,16 @@ Alors que vous étiez entrain de vous diriger vers la sortie du café, vous ente
 
 ## Solution
 
-Le fichier "signature.py" contient l'algorithme appliqué par le serveur, auquel on peut accéder en utilisant la commande nc challenges.404ctf.fr 30724.
-En analysant ce fichier, nous découvrons les éléments suivants :
-- Pour obtenir le flag, il faut envoyer un JSON. Ce JSON a un champ "data" qui contient un texte commençant par "gimme flagz", et un champ "sign" qui contient la signature de ce qui est contenu dans "data".
-- La signature d'un texte se fait en plusieurs étapes. Tout d'abord, le texte est converti en binaire. Ensuite, le binaire est découpé en 66 blocs. Enfin, chaque bloc est signé. Pour signer un bloc, on applique le hachage MD5 sur la clé privée autant de fois que la valeur du bloc. Par exemple, si le bloc est égal à 11 en binaire, ce qui correspond à la valeur décimale 3, on applique 3 fois le hachage MD5 sur la clé privée.
+Ce challenge traite du schéma de signature à usage unique Winternitz. Ce schéma utilise des chaînes de hashs, de la façon suivante :
+Imaginons que je veuille signer un message m composé d'un bloc de 4 bits (0 <= m <= 15). Je me fais une clé privée Kpriv=H(random), et je calcule Kpub = H(H(H(H...(H(Kpriv))))) = H^16(Kpriv), avec 16 (=2^block_size) fois l'application de H un algo de hachage. Pour signer m (0 <= m <= 15), je calcule s = H^m(Kpriv) (impossible a forger car il est impossible de remonter la chaîne de hashs depuis Kpub). Cette signature est facile à vérifier, en calculant H^(16-m)(s) == Kpub ?. Si oui, c'est que le signataire était en possession de Kpriv.
+Attention toutefois, une fois qu'une signature a été générée, il est facile pour un attaquant de signer un message m' plus grand que m (en appliquant simplement la fonction de hashage m' - m fois)
 
-On peut alors remarquer qu'il y a une faiblesse dans ce type de signature. En effet si on posséde une paire message_1/signature_1 valide, on peut signer n'importe quel autre message dont les blocs ont tous des valeurs supérieures aux blocs de message_1. Pour crée cette nouvelle signature il suffit de réappliquer le hachage MD5 sur signature_1 autant de fois que nécessaire pour atteindre la valeur du bloc de notre nouveau message.
+Pour appliquer ce schéma de signature à un message plus long, il suffit de répéter l'opération sur chaque bloc (c'est plus facile que de simplement augmenter la taille de bloc, qui augmenterait exponentiellement le nombre d'opérations de hachage à effectuer). Ainsi, la clé privée est un tableau [Kpriv_0, Kpriv_1, Kpriv_2, ...] et la clé publique [Kpub_0, Kpub_1, Kpub_2, ...], chaque sous-clé étant responsable de la signature d'un bloc comme vu plus haut.
+
+Pour palier au problème évoqué plus haut sur la capacité d'un attaquant à signer un message "plus grand", une checksum est ajoutée. Celle-ci fonctionne "à l'envers", de sorte que la checksum associée à un "petit message" soit grande, et celle d'un "grand message" soit petite, afin que signer un "plus grand" message nécessite de remonter la chaîne de hashs pour la partie relative à la checksum. En pratique, il suffit d'additionner les compléments à 2^block_size-1 pour chaque bloc.
+Par exemple, pour une block_size de 4 et un message m = 0x5da (blocs [5, 13, 10]), les compléments à 15 sont [10, 2, 5], et la checksum est donc 17 (0x11). On ajoute donc celle-ci au message, et on signe [5, 13, 10, 1, 1]. On se convainc facilement que pour signer un message plus grand (par exemple 0x6db), on va forcément faire baisser les compléments, et donc baisser la checksum. Il n'est donc pas possible d'avoir deux couples (message, checksum) dont l'un est supérieur en chaque bloc à un autre.
+
+Toutefois, cette signature reste à usage quasi-unique, parce qu'à partir du moment où un attaquant a vu passer deux couples (petit message, grande checksum) et (grand message, petite checksum), il peut avancer les chaînes de hashs des deux côté et signer quasiment n'importe quel message.
 
 C'est précisément ce qui est implémenté dans le fichier "solve.py".
 
