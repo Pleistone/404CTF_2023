@@ -28,7 +28,7 @@ Je ne sais toujours pas ce qu'il s'est passé ce jour-là, mais je retrouverais 
 
 Étant donné le titre du challenge, on peut supposer que le chiffrement sera lié aux [courbes elliptiques](https://fr.wikipedia.org/wiki/Courbe_elliptique). Pour commencer, nous analysons les ressources du défi, notamment en exécutant le fichier Python à l'aide de la commande : `sage --python3 challenge.py`.
 
-Après analyse, nous découvrons que l'algorithme de chiffrement fonctionne de la manière suivante :   
+Après analyse de `challenge.py`, nous découvrons que l'algorithme de chiffrement fonctionne de la manière suivante :   
 - Trois valeurs, a, b et p, sont définies.   
 - Nous considérons la courbe elliptique définie par l'équation y^2 = x^3 + a*x + b modulo p.   
 - Deux points aléatoires sont sélectionnés sur cette courbe, notés P1=(x1, y1) et P2=(x2, y2), et leurs valeurs sont affichées ainsi que la valeur de p.   
