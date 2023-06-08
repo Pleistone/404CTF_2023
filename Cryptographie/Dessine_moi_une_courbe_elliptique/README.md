@@ -36,7 +36,10 @@ Après analyse, nous découvrons que l'algorithme de chiffrement fonctionne de l
 - On définit une valeur IV et on l'affiche en hexadécimal.
 - Le flag est chiffré à l'aide de l'algorithme AES qui prend en entrée la valeur de IV et la clé précédemment définie.   
 - Le chiffré du flag est affiché en hexadécimal.   
-- Afin de déchiffrer le drapeau, nous avons besoin de la valeur de la clé. Pour obtenir cette clé, nous devons déterminer les valeurs de a et b. Pour cela, il suffit de poser un système d'équations avec les points (x1, y1) et (x2, y2), puis de le résoudre modulo p. Les méthodes pour résoudre ce système sont disponibles sur de nombreux [sites web](https://crypto.stackexchange.com/questions/97811/find-elliptic-curve-parameters-a-and-b-given-two-points-on-the-curve).  C'est justement ce qui est implémenté dans `solve.py`.
+
+Afin de déchiffrer le drapeau, nous avons besoin de la valeur de la clé. Pour obtenir cette clé, nous devons déterminer les valeurs de a et b. Pour cela, il suffit de poser un système d'équations avec les points (x1, y1) et (x2, y2), puis de le résoudre modulo p. Les méthodes pour résoudre ce système sont disponibles sur de nombreux [sites web](https://crypto.stackexchange.com/questions/97811/find-elliptic-curve-parameters-a-and-b-given-two-points-on-the-curve). Toutes les valeurs de (x1, y1), (x2, y2), p, hexa(IV), hexa(AES(flag)) se trouve dans la ressource data.txt.
+
+Cette solution est implémentée dans `solve.py`.
 
 ## Flag
 
