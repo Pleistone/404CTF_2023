@@ -51,7 +51,7 @@ err: not in namespace 404ctf
 ```
 
 5. On remarque qu'il y a une erreur sur le conteneur que l'on a déployé pour la résoudre, il faut redéployer le conteneur dans le namespace "404ctf". On crée donc le namespace "404ctf".
-Puis on reprend à partir de l'étape 3, mais on ajoute l'option `--namespace=404ctf`.
+Puis on reprend l'étape 3, mais en ajoutant l'option `--namespace=404ctf`.
 
 ```
 $ kubectl create namespace 404ctf
@@ -95,9 +95,6 @@ web-server-8465698799-kz7sj        1/1     Running   0                22s
 
 $ kubectl logs web-server-8465698799-kz7sj
 Starting serveur at port 8080
-
-$ kubectl exec -it web-server-8465698799-kz7sj -- sh
-#
 ```
 
 9. On sait que la suite du flag se trouve sur ce serveur et les logs du pod nous indique que le serveur web est accessible sur le port 8080. On va donc aller voir ce qu'il un a sur ce port en redirigeant le port 8080 du pod web-serveur vers notre port 8080.
@@ -108,7 +105,7 @@ Forwarding from 127.0.0.1:8080 -> 8080
 Forwarding [::1]:8080 -> 8080
 ```
 
-10. On peut désormais faire une requête sur l'url `http://localhost:8080` a l'aide Curl ou d'un navigateur. On arrive sur une page web sur la quel se trouve le message "Le drapeau est dans /flag". On vas donc sur la page `http://localhost:8080/flag` et la on trouve la fin du flag qui est "erte_de_k8s}".
+10. On peut désormais faire une requête sur l'url `http://localhost:8080` à l'aide Curl ou d'un navigateur. On arrive sur une page web sur la quel se trouve le message "Le drapeau est dans /flag". On vas donc sur la page `http://localhost:8080/flag` et la on trouve la fin du flag.
 
 <p align="center"><img src="la fin du flag.png" alt="La fin du flag" width="500"></p>
 
