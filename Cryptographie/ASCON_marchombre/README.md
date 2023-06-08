@@ -27,7 +27,8 @@ PLAINTEXT = ascon.decrypt(KEY, NONCE, ASSOCIATED_DATA,CIPHER, variant="Ascon-128
 
 print(PLAINTEXT.decode('latin'))
 ```
-On tombe alors sur le message suivant :   
+
+On tombe alors sur le message suivant :
 >La voie de l'ombre   
 >Et du silence   
 >404CTF{V3r5_l4_lum1èr3.}   
