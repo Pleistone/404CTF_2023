@@ -13,7 +13,7 @@ Suivi de la séquence : 32 69 31 73 34 69 31 73 31 35 64 31 6f 34 39 69 31 6f 34
 
 ## Solution
 
-Pour résoudre ce challenge, il suffit d'appliquer, sur la séquence fournis, les instructions fournis les unes après les autres. Pour faire cela, on peut faire un code python comme on trouve dans solce.py où utiliser un logiciel comme [Cyberchef](https://cyberchef.org/).
+Pour résoudre ce challenge, il suffit d'appliquer, sur la séquence fournis, les instructions fournis les unes après les autres. Pour faire cela, on peut faire un code python comme on trouve dans solve.py où utiliser un logiciel comme [Cyberchef](https://cyberchef.org/).
 
 1. Première étape, on converti la chaîne hexadécimale en ASCII
 ```
