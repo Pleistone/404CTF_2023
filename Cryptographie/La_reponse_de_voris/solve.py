@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#/usr/bin/python3
 import numpy as np
 
 def gen_ligne(i,n):
