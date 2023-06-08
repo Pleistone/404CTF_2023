@@ -33,7 +33,7 @@ On fait alors les constats suivants :
 
 On comprend alors que le chiffrement d'un mot de 5 lettres fonctionne selon l'exemple suivant : **chiffré(txays) = indice(t)\*chiffré(baaaa) + indice(x)\*chiffré(abaaa) + indice(a)\*chiffré(aabaa) + indice(y)\*chiffré(aaaba) + indice(s)\*chiffré(aaaab)**
 
-Maintenant, que nous avons compris le fonctionnement du chiffrement, on pourrait chercher à l'inverser en utilisant des matrices, ce qui serait tout à fait faisable. Cependant, nous allons opter pour une solution alternative. En effet, nous savons qu'il existe un nombre fini de chiffrements possibles pour un mot de 5 lettres (25^5 = 9 765 625). Ainsi, si nous chiffrons un mot, puis chiffrons le résultat et ainsi de suite, en répétant l'opération un nombre suffisant de fois (au maximum 25^5 fois) on finira par retomber sur le mot d'origine. Pour obtenir la version déchiffrée du mot de départ, il suffit de récupérer le résultat que nous avons obtenu juste avant de retomber sur le mot de départ. Étant donné que nous connaissons l'algorithme de chiffrement, nous pouvons réaliser ces opérations de chiffrement très rapidement. Nous appliquons ce principe à chaque groupe de cinq lettres de notre mot, puis nous concaténons les résultats pour obtenir la version déchiffrée du mot.
+Maintenant, que nous avons compris le fonctionnement du chiffrement, on pourrait chercher à l'inverser en utilisant des matrices, ce qui serait tout à fait faisable (voir `solve3.py`). Cependant, nous allons opter pour une solution alternative. En effet, nous savons qu'il existe un nombre fini de chiffrements possibles pour un mot de 5 lettres (25^5 = 9 765 625). Ainsi, si nous chiffrons un mot, puis chiffrons le résultat et ainsi de suite, en répétant l'opération un nombre suffisant de fois (au maximum 25^5 fois) on finira par retomber sur le mot d'origine. Pour obtenir la version déchiffrée du mot de départ, il suffit de récupérer le résultat que nous avons obtenu juste avant de retomber sur le mot de départ. Étant donné que nous connaissons l'algorithme de chiffrement, nous pouvons réaliser ces opérations de chiffrement très rapidement. Nous appliquons ce principe à chaque groupe de cinq lettres de notre mot, puis nous concaténons les résultats pour obtenir la version déchiffrée du mot.
 
 Cette solution est implémentée dans `solve1.py`.
 
@@ -43,6 +43,8 @@ Cette solution est implémentée dans `solve1.py`.
 Dans cette approche, nous commençons par effectuer les mêmes tests que dans la solution précédente. Une fois que nous avons compris que le mot est chiffré par groupes de cinq lettres, nous réalisons qu'il n'y a que 25^5 = 9 765 625 combinaisons de 5 lettres entre "a" à "y" possibles. On crée alors une chaîne de caractères de taille 5 * 9 765 625, contenant toutes les combinaisons possibles, que nous envoyons au serveur. Si jamais la chaîne avait été trop longue pour le serveur, on aurait pus essayer de la découpe en plusieurs chaînes un peu plus petite. Le serveur nous renvoie le chiffrement de cette très longue chaîne. Nous n'avons plus qu'à découper la réponse en groupes de cinq lettres, ce qui nous donne pour chaque combinaison de 5 lettres le chiffrement correspondant.
 
 Pour déchiffrer notre mot, nous le découpons également en groupes de cinq lettres, puis nous recherchons chaque morceau dans la liste des chiffré puis on regarde quel est la version déchiffrée correspondante.
+
+Cette solution est partiellement implémentée dans `solve2.php`.
 
 
 ## Flag
