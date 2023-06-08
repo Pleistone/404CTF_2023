@@ -36,12 +36,13 @@ ku zqtteg
 ## Solution
 
 
+
 ## Flag
 
 <details>
 <summary> Flag 🚩</summary>
 
 ```
-404CTF{1g0rfu4v3rt1Env4ut2}
+404CTF{leschaussettesdelarchiduchesse}
 ```
 
