@@ -44,7 +44,6 @@ Dans cette approche, nous commençons par effectuer les mêmes tests que dans la
 
 Pour déchiffrer notre mot, nous le découpons également en groupes de cinq lettres, puis nous recherchons chaque morceau dans la liste des chiffré puis on regarde quel est la version déchiffrée correspondante.
 
-Cette solution est implémentée dans `solve2.py`.
 
 ## Flag
 
