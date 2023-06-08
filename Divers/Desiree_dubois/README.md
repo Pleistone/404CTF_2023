@@ -32,7 +32,7 @@ On ouvre le mp3 sur Audacity, et on isole la partie qui nous intéresse. En Ecou
 On peut commencer par émettre une hypothèse importante et non idiote: le premier numéro composé doit être un zéro. Si on regarde le cadran, on s’aperçoit que le zero est le chiffre qui doit prendre le plus de temps à revenir dans sa position. En écoutant, le premier retour est long, l’hypothèse semble pertinente.
 
 On calcule alors une approximation de l'écart de temps entre chaque numéro : 1.6/13 = 0.123   
-On en déduit une approximation temporelle de chaque numéro:
+On en déduit une approximation temporelle de chaque numéro:   
 > 0:1.6   
 > 1:0.492   
 > 2:0.615   
