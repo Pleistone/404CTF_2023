@@ -17,7 +17,7 @@ téléphone à cadran. De plus dans l’énoncé, il est question de “préveni
 On ouvre le mp3 sur Audacity, et on isole la partie qui nous intéresse. En Ecoutant et en regardant ce signal, on identifie bien 10 zones similaires, correspondant à la composition de
 10 chiffres, soit un numéro de téléphone.
 
-<p align="center"><img src="Cadran_Téléphonique.jpg" alt="Cadran Téléphonique" width="400"></p>
+<p align="center"><img src="Cadran_Téléphonique.jpg" alt="Cadran Téléphonique" width="250"></p>
 
 Étant donné que nous sommes en présence d'un téléphone à cadran, la durée nécessaire au retour du cadran à sa position initiale varie en fonction du numéro composé. Cette particularité devrait nous permettre de déterminer le numéro composé. On procéde donc à la mesure du temps requis pour que le cadran revienne à sa position d'origine. Les valeurs obtenues sont les suivantes :    
 > 1 : 3.8-2.229 → 1.6   
