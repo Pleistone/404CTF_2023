@@ -16,6 +16,7 @@ Les sources des challenges sont données dans le [Github du 404CTF 2023](https:/
 - [X] [Intro - Recette](./Cryptographie/Recette)
 - [X] [Dessine-moi une courbe elliptique](./Cryptographie/Dessine_moi_une_courbe_elliptique)
 - [X] [Le Jour de l'espace](./Cryptographie/Le_jour_de_l_espace)
+- [ ] [Une littérature animalière](./Cryptographie/Une_litterature_animaliere)
 - [X] [ASCON Marchombre](./Cryptographie/ASCON_marchombre)
 - [X] [La Réponse de Voris](./Cryptographie/La_reponse_de_voris)
 - [X] [Oracle cassé](./Cryptographie/Oracle_casse)
