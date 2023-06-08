@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-#404CTF23
-#geoz
-#27 MAI 2023
-
 import ascon
 
 KEY = bytes.fromhex("00456c6c616e61206427416c2d466172")

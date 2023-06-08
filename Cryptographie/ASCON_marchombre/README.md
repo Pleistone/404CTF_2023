@@ -13,7 +13,7 @@ Données associées : 80400c0600000000
 
 ## Solution
 
-Le titre du challenge nous fait comprendre qu'on a à faire à un chiffrement [Ascon](https://en.wikipedia.org/wiki/Ascon_(cipher)). Il existe plusieurs versions du chiffrement Ascon, après avoir comparé le message chiffré avec ce que renvoie les différents chiffrement Ascon, on en déduit qu'on a à faire à de l'Ascon-128 v1.2. On dispose déjà de tous les éléments nécessaires pour déchiffrer un texte en Ascon. On rédige donc un code Python qui déchiffre de l'Ascon :
+Le titre du challenge nous fait comprendre qu'on a à faire à un chiffrement [Ascon](https://en.wikipedia.org/wiki/Ascon_(cipher)). Il existe plusieurs versions du chiffrement Ascon, après avoir comparé le message chiffré avec ce que renvoie les différents chiffrement Ascon, on en déduit qu'on a à faire à de l'Ascon-128 v1.2. On dispose déjà de tous les éléments nécessaires pour déchiffrer un texte en Ascon. On rédige donc un code Python qui déchiffre de le message :
 
 ```python
 import ascon
