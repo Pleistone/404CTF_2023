@@ -11,8 +11,7 @@ Colette, directrice du Matin et du 404CTF
 
 ## Solution
 
-Dans le fichier "oracle.py", on trouve l'algorithme appliqué par l'oracle, auquel on peut accéder en utilisant la commande `nc challenges.404ctf.fr 31451`.   
-Après analyse, nous comprenons que l'oracle effectue les actions suivantes :   
+Dans le fichier "oracle.py", on trouve l'algorithme appliqué par l'oracle, auquel on peut accéder en utilisant la commande `nc challenges.404ctf.fr 31451`. Après analyse, nous comprenons que l'oracle effectue les actions suivantes :   
 - Il commence par générer une paire de clés publique/privée pour RSA.   
 - Ensuite, il utilise RSA pour chiffrer le flag avec cette clé.   
 - Il affiche la valeur chiffrée du flag et la représentation hexadécimale de la clé publique.   
