@@ -15,7 +15,7 @@ Comme indiqué dans l'énoncé, on constate le serveur en utilisant la commande 
 
 On commence par envoyer des messages très courts, composés d'une ou deux caractères. Rapidement, on constate que pour un message de n lettres, on reçoit un chiffré de n lettres en retour. Dans le but de mieux comprendre le chiffrement, on développe un algorithme Python qui convertit chaque lettre du mot en son indice correspondant dans l'alphabet. En utilisant cet algorithme, on cherche des relations entre les différents chiffres obtenus. En particulier, on étudie les relations entre les chiffrés de mots de petite taille et très proches les uns des autres, tels que les mots "ba", "ça" et "da".
 
-On comprend alors que le chiffrement d'un mot fonctionne selon l'exemple suivant : **chiffré(mot) = chiffré(aaa) + indice(m)*[1 1 1] + indice(o)*[1 2 2] + indice(t)*[1 2 3]**
+On comprend alors que le chiffrement d'un mot fonctionne selon l'exemple suivant : **chiffré(mot) = chiffré(aaa) + indice(m)\*[1 1 1] + indice(o)\*[1 2 2] + indice(t)\*[1 2 3]**
 
 Maintenant, que nous avons compris le fonctionnement du chiffrement, on peut l'inverser en utilisant des matrices. C'est ce qui est implementé dans `solve.py`.
 
