@@ -34,7 +34,7 @@ Après analyse, nous découvrons que l'algorithme de chiffrement fonctionne de l
 - Deux points aléatoires sont sélectionnés sur cette courbe, notés P1=(x1, y1) et P2=(x2, y2), et leurs valeurs sont affichées ainsi que la valeur de p.   
 - Les valeurs de a et b sont concaténées pour former une clé.   
 - On définit une valeur IV et on l'affiche en hexadécimal.
-- Le flag est chiffré à l'aide de l'algorithme AES et de IV et la clé précédemment définie.   
+- Le flag est chiffré à l'aide de l'algorithme AES qui prend en entrée la valeur de IV et la clé précédemment définie.   
 - Le chiffré du flag est affiché en hexadécimal.   
 - Afin de déchiffrer le drapeau, nous avons besoin de la valeur de la clé. Pour obtenir cette clé, nous devons déterminer les valeurs de a et b. Pour cela, il suffit de poser un système d'équations avec les points (x1, y1) et (x2, y2), puis de le résoudre modulo p. Les méthodes pour résoudre ce système sont disponibles sur de nombreux [sites web](https://crypto.stackexchange.com/questions/97811/find-elliptic-curve-parameters-a-and-b-given-two-points-on-the-curve).  C'est justement ce qui est implémenté dans `solve.py`.
 
