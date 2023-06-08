@@ -31,7 +31,8 @@ Je ne sais toujours pas ce qu'il s'est passé ce jour-là, mais je retrouverais 
 Après analyse de `challenge.py`, nous découvrons que l'algorithme de chiffrement fonctionne de la manière suivante :   
 - Trois valeurs, a, b et p, sont définies.   
 - Nous considérons la courbe elliptique définie par l'équation y^2 = x^3 + a*x + b modulo p.   
-- Deux points aléatoires sont sélectionnés sur cette courbe, notés P1=(x1, y1) et P2=(x2, y2), et leurs valeurs sont affichées ainsi que la valeur de p.   
+- Deux points aléatoires sont sélectionnés sur cette courbe, notés P1=(x1, y1) et P2=(x2, y2).   
+- On affiche les valeurs de P1, P2 et p.   
 - Les valeurs de a et b sont concaténées pour former une clé.   
 - On définit une valeur IV et on l'affiche en hexadécimal.
 - Le flag est chiffré à l'aide de l'algorithme AES qui prend en entrée la valeur de IV et la clé précédemment définie.   
