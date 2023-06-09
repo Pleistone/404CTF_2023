@@ -25,8 +25,9 @@ D'abord étonné, vous devenez curieux et pensif, qu'est-ce que cela peut-il bie
  
 ## Solution
 
-Le challenge nous fournit un fichier poeme.zip contenant 6535 images en noir et blanc, sur lesquelles est écrit un chiffre. L'idée est de créer un algorithme de reconnaissance d'image qui va déterminer le chiffre sur chaque image. Une fois cela réalisé, la phrase dans l'énoncé "Être pair ou ne pas l'être" suggère que l'on doit convertir cette longue chaîne de chiffres en binaire, en associant un 0 aux nombres pairs et un 1 aux nombres impairs. On obtient ainsi une longue séquence binaire que l'on convertit en texte. Cela nous donne un poème avec le flag à la fin. Il y a quelques petits ratés du a des erreurs dans la reconnaissance des chiffres, mais on a globalement un texte lisible.
- 
+Le challenge nous fournit un fichier poeme.zip contenant 6535 images en noir et blanc, sur lesquelles est écrit un chiffre. L'idée est de créer un algorithme de reconnaissance d'image qui va déterminer le chiffre sur chaque image. Une fois cela réalisé, la phrase dans l'énoncé "Être pair ou ne pas l'être" suggère que l'on doit convertir cette longue chaîne de chiffres en binaire, en associant un 0 aux nombres pairs et un 1 aux nombres impairs. On obtient ainsi une longue séquence binaire que l'on convertit en texte. Cela nous donne un poème avec le flag à la fin. 
+
+Cette solution est implémentée dans "solve.py". Après exécution, on obtient le texte suivant :  
 >Et2e pair ou ne paS lettre  
 >  
 >Lâhomme, dont la vie entiÃ¨re  
@@ -52,9 +53,11 @@ Le challenge nous fournit un fichier poeme.zip contenant 6535 images en noir et 
 >Par jour l'homme a donc sur terre  
 >1/4 d'heure de bon temps.  
 >Juste assez pour déposE2 le drapeau sur le 424CTF :   
->404CTF{d3_L4_p03S1e_qU3lqU3_P3u_C0nT3mp0r4in3}  
+>404CTF{d3_L4_p03S1e_qU3lqU3_P3u_C0nT3mpkr4in3}  
 >poème original : Le quast d'heure de bon temps Nicolas Boileau$  
   
+Il y a quelques petits ratés du a des erreurs dans la reconnaissance des chiffres, mais on a globalement un texte lisible.
+On a également quelques erreurs dans le flag que l'on vas corriger à la main.
 
 ## Flag
 
