@@ -16,7 +16,7 @@ C'est alors que cet individu névrosé qu'est Jean-Paul Sat entre en trombe.
 
 ## Solution
 
-Le challenge nous fournit le fichier réveil.circ que l'on ouvre avec logisim.
+Le challenge nous fournit le fichier réveil.circ que l'on ouvre avec [Logisim](http://www.cburch.com/logisim/).
 
 L'énoncé nous dit "Fais afficher Un_c à ton réveil", c'est ce que l'on va essayer de faire en modifiant les valeurs de l'input. En effectuant quelques tests, on se rend compte que chaque valeur de l'input permet de modifier un segment unique de l'afficheur. Il devient alors assez facile de faire afficher Un_c sur notre réveil. Une fois cela réalisé, on active l'horloge pour voir la suite du message qui nous dévoile le flag.
 
