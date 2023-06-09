@@ -17,7 +17,7 @@ _exemple : 404CTF{36_quai_des_orfevres_paris}_
 ## Solution
 
 On nous fournis l'image suivante :
-<p align="center"><img src="Photo.jpg" alt="Photo Lettre" width="400"></p>
+<p align="center"><img src="photo.jpg" alt="Photo Lettre" width="400"></p>
 
 Sur cette lettre on peut voir Divers information :
 - Le nom de la rue : Rue Victor Hugo
