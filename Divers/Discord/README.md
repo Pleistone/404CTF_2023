@@ -23,6 +23,8 @@ En admirant la décoration rustique et luxueuse du Procope une affiche attire to
 
 En utilisant la fonctionnalité de Discord pour recherche le patron 404CTF{ sur tout le serveur, on trouve relativement rapidement que le flag se trouve dans le message annonçant l'ouverture du CTF.
 
+<p align="center"><img src="Annonce Discord.png" alt="Annonce Discord" width="300"></p>
+
 ## Flag
 
 <details>

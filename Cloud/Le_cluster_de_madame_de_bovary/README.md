@@ -72,7 +72,7 @@ $ kubectl logs the-container-2-6c58674555-7zq8r
 err: /opt/my_secret_dir/ does not exist
 ```
 
-7. On a encore une erreur, mais il semble que le conteneur ait été déployé correctement. De plus le fichier dossier opt de ce conteneur semble pouvoir contenir des informations intéressantes. On va donc accéder au conteneur et regarder si le dossier opt ne contiendrait pas le flag.
+7. On a encore une erreur, mais il semble que le conteneur ait été déployé correctement. De plus le fichier dossier opt de ce conteneur semble contenir des informations intéressantes. On va donc accéder au conteneur et regarder si le dossier opt ne contiendrait pas le flag.
 
 ```
 $ kubectl exec -it the-container-2-6c58674555-7zq8r --namespace=404ctf -- sh

@@ -12,7 +12,7 @@ Vous trouverez en pièce-jointe l'enregistrement de cette conversation digne des
 ## Solution
 
 Une fois l’énoncé lu attentivement, on télécharge le mp3, que l’on écoute attentivement. Dès la première écoute, un élément attire l’oreille: la composition du numéro sur un ancien
-téléphone à cadran. De plus dans l’énoncé, il est question de “prévenir” la personne qui est victime du mauvais coup. Ce qui pourrait voulori dire qu'on doit l’appeler.
+téléphone à cadran. De plus dans l’énoncé, il est question de “prévenir” la personne qui est victime du mauvais coup. Quoi de mieux pour le prévenir que de l’appeler.
 
 On ouvre le mp3 sur Audacity, et on isole la partie qui nous intéresse. En Ecoutant et en regardant ce signal, on identifie bien 10 zones similaires, correspondant à la composition de
 10 chiffres, soit un numéro de téléphone.
@@ -31,7 +31,7 @@ On ouvre le mp3 sur Audacity, et on isole la partie qui nous intéresse. En Ecou
 > 9 : 19.694-18.715 → 0.97   
 > 10 : 21.539 -20.627 →0.912   
 
-On peut commencer par émettre une hypothèse importante et non idiote: le premier numéro composé doit être un zéro. Si on regarde le cadran, on s’aperçoit que le zero est le chiffre qui doit prendre le plus de temps à revenir dans sa position. En écoutant, le premier retour est long, l’hypothèse semble pertinente.
+On peut commencer par émettre une hypothèse importante : le premier numéro composé doit être un zéro. Si on regarde le cadran, on s’aperçoit que le zero est le chiffre qui doit prendre le plus de temps à revenir dans sa position. En écoutant, le premier retour est long, l’hypothèse semble pertinente.
 
 On calcule alors une approximation de l'écart de temps entre chaque numéro : 1.6/13 = 0.123   
 On en déduit une approximation temporelle de chaque numéro:   
