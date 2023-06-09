@@ -56,7 +56,7 @@ Cette solution est implémentée dans "solve.py". Après exécution, on obtient 
 >404CTF{d3_L4_p03S1e_qU3lqU3_P3u_C0nT3mpkr4in3}  
 >poème original : Le quast d'heure de bon temps Nicolas Boileau$  
   
-Il y a quelques petits ratés du a des erreurs dans la reconnaissance des chiffres, mais on a globalement un texte lisible.
+Il y a quelques petits ratés du à des erreurs dans la reconnaissance des chiffres, mais on a globalement un texte lisible.
 On a également quelques erreurs dans le flag que l'on vas corriger à la main.
 
 ## Flag
