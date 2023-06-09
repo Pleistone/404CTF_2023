@@ -25,7 +25,7 @@ D'abord étonné, vous devenez curieux et pensif, qu'est-ce que cela peut-il bie
  
 ## Solution
 
-Le challenge nous fournit un fichier poeme.zip contenant 6535 images en noir et blanc, sur lesquelles est écrit un chiffre. L'idée est de créer un algorithme de reconnaissance d'image qui va déterminer le chiffre sur chaque image. Une fois cela réalisé, la phrase dans l'énoncé "Être pair ou ne pas l'être" suggère que l'on doit convertir cette longue chaîne de chiffres en binaire, en associant un 0 aux nombres pairs et un 1 aux nombres impairs. On obtient ainsi une longue séquence binaire que l'on convertit en texte. Cela nous donne un poème avec le flag à la fin.
+Le challenge nous fournit un fichier poeme.zip contenant 6535 images en noir et blanc, sur lesquelles est écrit un chiffre. L'idée est de créer un algorithme de reconnaissance d'image qui va déterminer le chiffre sur chaque image. Une fois cela réalisé, la phrase dans l'énoncé "Être pair ou ne pas l'être" suggère que l'on doit convertir cette longue chaîne de chiffres en binaire, en associant un 0 aux nombres pairs et un 1 aux nombres impairs. On obtient ainsi une longue séquence binaire que l'on convertit en texte. Cela nous donne un poème avec le flag à la fin. Il y a quelques petits ratés du a des erreurs dans la reconnaissance des chiffres, mais on a globalement un texte lisible.
  
 >Et2e pair ou ne paS lettre  
 >  
