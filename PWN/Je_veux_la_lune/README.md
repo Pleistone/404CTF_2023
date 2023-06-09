@@ -20,7 +20,7 @@ Entre peur et pitié, vous décidez de l'aider à obtenir le contenu du fichier 
 En ressouce du challenge, un script shell est fournit. En analysant son fonctionnement, on constate que l'entrée `personne` n'est pas sanitize. Cela signifie que l'on peut injecter du code dans cette entrée, qui sera ensuite exécuté lors de l'appel à la ligne `eval grep -wie ^$personne informations.txt`. Selon l'énoncé, Caligula souhaite obtenir la lune, donc on affiche le contenu du fichier `lune.txt` avec la commande : `echo $(<lune.txt)`.
 
 On établit dnc la connextion avec le serveur avec la comande `nc challenges.404ctf.fr 31215` et on envoie `echo $(<lune.txt)` 
-<p align="center"><img src="Solution.png" alt="Solution" width="500"></p>
+<p align="center"><img src="Solution.png" alt="Solution" width="800"></p>
 
 ## Flag
 
