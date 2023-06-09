@@ -57,7 +57,6 @@ Les sources des challenges sont données dans le [Github du 404CTF 2023](https:/
 - [X] [L'âme d'un poète et le cœur d'une femme 1/4](./Osint/L_ame_d_un_poete_et_le_coeur_d_une_femme_1/)
 - [X] [L'âme d'un poète et le cœur d'une femme 2/4](./Osint/L_ame_d_un_poete_et_le_coeur_d_une_femme_2/)
 - [ ] [L'âme d'un poète et le cœur d'une femme 3/4](./Osint/L_ame_d_un_poete_et_le_coeur_d_une_femme_3/)
-- [ ] [L'âme d'un poète et le cœur d'une femme 4/4](./Osint/L_ame_d_un_poete_et_le_coeur_d_une_femme_3/)
 
 ## Reverse engineering
 - [X] [Intro - Le divin crackme](./Reverse_engineering/Le_divin_crackme/)
