@@ -11,7 +11,7 @@ Il vous regarde avec insistance.
 
 ## Solution
 
-Le challenge nous fournit un fichier nommé bienvenue.circ. Après quelques recherches, on découvre que l'on peut ouvrir ce type de fichier avec le logiciel Logisim. On ouvre donc le fichier et on constate qu'il est composé de plusieurs parties. On commence par la partie 1, où l'on trouve le début du flag :
+Le challenge nous fournit un fichier nommé bienvenue.circ. Après quelques recherches, on découvre que l'on peut ouvrir ce type de fichier avec le logiciel [Logisim](http://www.cburch.com/logisim/). On ouvre donc le fichier et on constate qu'il est composé de plusieurs parties. On commence par la partie 1, où l'on trouve le début du flag :
 
 <p align="center"><img src="Partie 1.png" alt="Partie 1" width="500"></p>
 

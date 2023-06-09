@@ -18,7 +18,7 @@ C'est alors que cet individu névrosé qu'est Jean-Paul Sat entre en trombe.
 
 
 
-<p align="center"><img src="Input solution.png" alt="Input solution" width="500"></p>
+<p align="center"><img src="Input solution.png" alt="Input solution" width="600"></p>
 
 ## Flag
 
