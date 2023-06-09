@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 from tensorflow.keras.applications.resnet50 import ResNet50
-""" mink start """
+
 # chargement du resnet50
 model = ResNet50(weights='imagenet')
 
@@ -96,10 +96,10 @@ def main():
     adversarial_image32 = apply_adversarial_changes32(original_image, adversarial_noise)
 
     # sauvegarde pour exploitation
-    adversarial_file = "adv_chat.png"
+    adversarial_file = "solution 1.png"
     save_image_tf32(adversarial_image32, adversarial_file)
 
     print(f"image => {adversarial_file}")
 
 main()
-""" mink stop """
+

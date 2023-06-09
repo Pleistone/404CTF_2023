@@ -83,12 +83,12 @@ def add_image_noise(img_entree, img_bruit):
     image_bruitee = ajuster_image(image_bruit, image_entree, eps)
 
     # Enregistrement de l'image modifiée
-    output_file = "images/modifiee_intermediaire.png"
+    output_file = "solution 2.png"
     image_bruitee.save(output_file, format="png")
 
 
-img_entree = "images/chat.jpg"
-img_bruit = "images/black_teapot_1.jpg"
+img_entree = "chat.jpg"
+img_bruit = "teapot.jpg"
 add_image_noise(img_entree, img_bruit)
 print("L'image modifiée a été enregistrée avec succès.")
 
