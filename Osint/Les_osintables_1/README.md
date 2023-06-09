@@ -16,7 +16,7 @@ _exemple : 404CTF{36_quai_des_orfevres_paris}_
 
 ## Solution
 
-On nous fournis l'image suivante :
+On nous fournis l'image suivante :   
 <img src="photo.jpg" alt="Photo Lettre" width="200">
 
 Sur cette lettre on peut voir Divers information :
