@@ -1,4 +1,4 @@
-# Intro le Tour de France
+# Mentions Gastronomiques
 
 ## Enoncé
 
@@ -7,8 +7,7 @@
 
 Après quelques recherches sur les plus gros réseaux sociaux, on trouve rapidement le compte de Margot Paquet sur Instagram dont les posts datent de juste avant le début du CTF https://www.instagram.com/margot.paquet/tagged/.
 
-On peut voir sur son profil 7 photos de plats postées à des dates différentes et on voit qu'elle a été mentionnée par le compte https://www.instagram.com/futurionix/.  
-Sur le compte Futurionix, on apprend que le diner avec Margot a eu lieu le 26 avril juste devant cette photo:
+On peut voir sur son profil 7 photos de plats postées à des dates différentes et on voit qu'elle a été mentionnée par le compte https://www.instagram.com/futurionix/. Sur le compte Futurionix, on apprend que le diner avec Margot a eu lieu le 26 avril juste devant cette photo:
 
 <p align="center"><img src="Margot paquet resto.png" alt="Margot paquet resto" width="400"></p>
 
@@ -20,7 +19,7 @@ Le menu sur le site [The Fork](https://www.thefork.fr/restaurant/la-fregate-r206
 
 <p align="center"><img src="Menu.jpg" alt="Menu resto" width="400"></p>
 
-On additionner les prix de ces deux éléments (tarte tatin + boeuf bourguignon) pour trouver la somme finale.
+On additionner les prix de la tarte tatin + boeuf bourguignon pour trouver la somme finale.
 
 ## Flag
 
