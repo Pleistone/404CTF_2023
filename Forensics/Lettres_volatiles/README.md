@@ -1,6 +1,6 @@
 # Lettres volatiles
 
-**Difficulté** : Facile
+**Difficulté** : Moyen
 
 ## Enoncé
 Une femme regarde avec hésitation une table à l'autre bout du café Le Procope, au milieu des conversations de fond des habitués. Sur cette table, un ordinateur allumé est laissé à l'abandon.
