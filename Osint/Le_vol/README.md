@@ -1,6 +1,6 @@
 # Un Vol ?
 
-**Difficulté** : Facile \
+**Difficulté** : Facile
 
 ## Enoncé
 

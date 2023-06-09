@@ -1,5 +1,7 @@
 # Un courrier suspect
 
+**Difficulté** : Introduction
+
 ## Enoncé
 
 Vous commencez à profiter de la vue offerte par ce café pittoresque ainsi que de vos premières gorgées de café quand vous sentez une présence derrière vous.   

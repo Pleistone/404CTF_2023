@@ -1,5 +1,7 @@
 # L'énigme du mal-aimé
 
+**Difficulté** : Moyen
+
 ## Enoncé
 
 Le café littéraire est un endroit très mystérieux, dans lequel moult personnes d'horizon divers et variés se rencontrent, dans lequel le temps n'existe pas vraiment. Si ces petits paradoxes temporels ne vous dérangeant guère, il n'en est pas de même pour tous les participants. C'est entre deux cafés crème que Apollinaire vous aborde. Ce dernier a le regard hagard, sa tête envelopée dans d'épais bandages, et vous tint à peu près ce language

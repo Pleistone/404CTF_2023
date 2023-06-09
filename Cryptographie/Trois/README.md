@@ -1,5 +1,7 @@
 # Trois
 
+**Difficulté** : Moyen
+
 ## Enoncé
 
 Lors de votre exploration du Procope, vous sentez une légère agitation parcourir la salle. Il semblerait qu'une membre éminente du café, surnommée Louise Michel, ait disparu récemment, en laissant derrière elle une lettre :

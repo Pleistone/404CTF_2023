@@ -1,5 +1,7 @@
 # Désirée Dubois
 
+**Difficulté** : Facile
+
 ## Enoncé
 
 L'ambiance est plus calme au Procope. Vous errez sans réel but à travers ses majestueuses galeries parsemées d'œuvres particulièrement élégantes, mais dont vous ne saurez définir l'origine.

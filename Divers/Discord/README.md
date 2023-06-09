@@ -1,5 +1,7 @@
 # Discord
 
+**Difficulté** : Introduction
+
 ## Enoncé
 
 En admirant la décoration rustique et luxueuse du Procope une affiche attire tout particulièrement votre attention, il s'agit d'une petite annonce :

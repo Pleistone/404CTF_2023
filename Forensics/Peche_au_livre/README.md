@@ -1,5 +1,7 @@
 # Pêche au livre
 
+**Difficulté** : Introduction
+
 ## Enoncé
 Etant tranquillement assis au café littéraire, vous entendez Albert Camus discuter avec quelqu'un d'autre.
 

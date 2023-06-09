@@ -1,5 +1,7 @@
 # Dessine-moi une courbe elliptique
 
+**Difficulté** : Facile
+
 ## Enoncé
 
 Au cours d'une de vos explorations dans le café, vous surprenez la conversation suivante :

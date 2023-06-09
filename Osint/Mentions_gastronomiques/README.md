@@ -1,6 +1,6 @@
 # Mentions Gastronomiques
 
-**Difficulté** : Facile \
+**Difficulté** : Facile 
 
 ## Enoncé
 

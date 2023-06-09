@@ -1,5 +1,7 @@
 # De la poésie
 
+**Difficulté** : Introduction
+
 ## Enoncé
 
 Debout dans l'allée, un homme singulier regarde fixement l'imposante horloge qui, d'un vert canard, plonge la rangée de livres dans une ambiance bucolique très agréable. Perturbé par cette étrange figure, vous n'avez même pas remarqué que quelqu'un s'était rapproché de vous.

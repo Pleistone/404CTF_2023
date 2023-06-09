@@ -1,5 +1,7 @@
 # Un réveil difficile
 
+**Difficulté** : Facile
+
 ## Enoncé
 
 Pour changer de l'électronique, Jean-Paul Sat vous propose de tester un exercice d'écriture. Le principe est le suivant : chaque premier mot de la phrase doit être la minute pendant laquelle la phrase est écrite. Ainsi, ce zigoto qu'est Jean-Paul Sat a posé un réveil digital tout ce qu'il y a de plus classique sur la table.

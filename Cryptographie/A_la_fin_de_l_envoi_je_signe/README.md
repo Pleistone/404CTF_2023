@@ -1,5 +1,7 @@
 # À la fin de l'envoi, je signe !
 
+**Difficulté** : Difficile
+
 ## Enoncé
 Alors que vous étiez entrain de vous diriger vers la sortie du café, vous entendez subitement du bruit venir d'un petit attroupement formé autour d'une table. Un homme, debout, semble visiblement agaçé par quelque chose.   
 « C'est inadmissible ! Comment je peux me défendre maintenant ? Si je répond à leurs critiques, ils me traiteront de troll !   

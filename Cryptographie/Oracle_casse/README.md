@@ -1,5 +1,7 @@
 # Oracle cassé
 
+**Difficulté** : Moyen
+
 ## Enoncé
 
 Cette description fait référence à un challenge de l'édition précédente qu'il n'est absolument pas nécessaire de connaître pour faire ce challenge.

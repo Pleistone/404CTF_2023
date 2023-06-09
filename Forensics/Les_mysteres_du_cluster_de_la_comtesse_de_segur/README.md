@@ -1,5 +1,7 @@
 # Les Mystères du cluster de la Comtesse de Ségur [1/2]
 
+**Difficulté** : Facile
+
 ## Enoncé
 Vous rencontrez la Comtesse de Ségur au Procope. La Comtesse de Ségur a créé une entreprise de vente de livres en ligne en s'aidant du succès de ses livres pour enfants et l'a déployé sur un cluster Kubernetes.
 

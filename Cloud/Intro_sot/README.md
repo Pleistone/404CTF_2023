@@ -1,5 +1,7 @@
 # Le Sot
 
+**Difficulté** : Introduction
+
 ## Enoncé
 Dans un coin reculé du café est assis Panurge, la mine sombre. Prenant pitié, vous vous donnez pour mission de lui remonter le moral.   
 « Que diable vous prend-il aujourd'hui ? Il me semblerait rencontrer le désepoir en personne.   

@@ -1,5 +1,7 @@
 # Le Jour de l'espace
 
+**Difficulté** : Facile
+
 ## Enoncé
 
 Rimbaud vous propose une séance initiatique au Oui-ja dans l'aile mystique du café littéraire (oui, oui, ça existe), vous avez une vision ésotérique :   
