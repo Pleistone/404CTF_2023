@@ -1,5 +1,7 @@
 # Un Vol ?
 
+**Difficulté** : Facile \
+
 ## Enoncé
 
 

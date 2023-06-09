@@ -1,5 +1,7 @@
 # Intro le Tour de France
 
+**Difficulté** : Introduction \
+
 ## Enoncé
 
 
