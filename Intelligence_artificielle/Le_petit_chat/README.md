@@ -32,14 +32,14 @@ Un peu de lecture pour trouver l'inspiration : http://clpav.fr/lecture-chat-bott
 
 ## Solution
 
-3 Solution 
+L'objectif de ce challenge est de modifier l'image `chat.png` de manière à ce qu'elle soit reconnue par l'algorithme `signature.py` en tant que théière, mais on doit toujours reconnaître le chat. Une fois cette modification réussie, nous téléchargeons l'image modifiée sur le site https://imgtr.ee/. Ensuite, nous envoyons l'URL au serveur en établissant une connexion avec la commande `nc challenges.404ctf.fr 32525`.
 
-solution 1 : la plus propre prend vecteur de sortie de l'ia , ajoute du bruit vois passe dans 'ia
+On a trois solutions pour modifier l'image :
+solution 1 : On intègre du bruit dans l'image en utilisant la technique de descente de gradient afin de faire converger le vecteur de sortie de l'image "chat" vers le vecteur de sortie de l'image "teapot" sans pour autant qu'elle soit trop modifiée. Cette solution est implémentée dans le fichier "solve1.py".
 
+Solution 2 : Cette approche consiste à appliquer un watermark en forme de théière sur l'image tout en brouillant le reste de l'image. Pour ce faire, nous prenons une photo d'une théière et rapprochons autant que possible les pixels de l'image "chat.png" vers les pixels de l'image de la théière, en veillant à ne pas dépasser l'écart maximal autorisé par la vérification dans "verification.py". Cette solution est implémentée dans "solve2.py".
 
-Solution 2: Cette approche consiste à appliquer un watermark en forme de théière sur l'image tout en brouillant le reste de l'image. Pour ce faire, nous prenons une photo d'une théière et rapprochons autant que possible les pixels de l'image "chat.png" vers les pixels de l'image de la théière, en veillant à ne pas dépasser l'écart maximal autorisé par la vérification dans "verification.py". Cette solution est implémentée dans "solve2.py".
-
-Solution 3: Dans "verification.py", nous constatons que l'IA chargée de reconnaître une théière ou non prend en entrée une image de taille quelconque et la redimensionne en une image de taille 224*224. Cependant, le code de vérification pour s'assurer que nous n'avons pas trop modifié l'image du chat ne prend en compte que les pixels des 224 premières lignes et des 224 premières colonnes de l'image. Il suffit donc de prendre une grande image de théière, de placer l'image du chat dans le coin supérieur droit, et le tour est joué. C'est ce qui est réalisé dans "solution 3.jpg".
+Solution 3 : Dans "verification.py", nous constatons que l'IA chargée de reconnaître une théière ou non prend en entrée une image de taille quelconque et la redimensionne en une image de taille 224*224. Cependant, le code de vérification pour s'assurer que nous n'avons pas trop modifié l'image du chat ne prend en compte que les pixels des 224 premières lignes et des 224 premières colonnes de l'image. Il suffit donc de prendre une grande image de théière, de placer l'image du chat dans le coin supérieur droit, et le tour est joué. C'est ce qui est réalisé dans "solution 3.jpg".
 
 
 ## Flag

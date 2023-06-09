@@ -3,6 +3,7 @@ import numpy as np
 from PIL import Image
 from tensorflow.keras.applications.resnet50 import ResNet50
 
+
 # chargement du resnet50
 model = ResNet50(weights='imagenet')
 
@@ -102,4 +103,3 @@ def main():
     print(f"image => {adversarial_file}")
 
 main()
-
