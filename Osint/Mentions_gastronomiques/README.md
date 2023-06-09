@@ -27,5 +27,5 @@ On additionner les prix de la tarte tatin + boeuf bourguignon pour trouver la so
 <summary> Flag 🚩</summary>
 
 ```
-404CTF{47.017217, 04.868799}
+404CTF{22.50}
 ```
