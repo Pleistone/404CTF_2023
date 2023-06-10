@@ -36,11 +36,11 @@ Trouvez l'adresse Ethereum de l'artiste.
 
 ## Solution
 
-On doit trouver l'adresse Ethereum  de l'artiste. On utilise le site web opensea pour trouver l'oeuvre. On recherche les mots clé "blanc avec des liserés blancs transversaux" qui semble être le nom du NFT acheté. Voici les premiers résultats :
+On doit trouver l'adresse Ethereum  de l'artiste. On utilise le site web [opensea](https://opensea.io/) pour trouver l'oeuvre. On recherche les mots clé "blanc avec des liserés blancs transversaux" qui semble être le nom du NFT acheté. Voici les premiers résultats :
 
 <p align="center"><img src="NFT recherche.png" alt="NFT recherche" width="500"></p>
 
-Les NFT unicolores appartiennent à Antrios, l'artiste mentionné dans l'énoncé. Sur son profil, nous obtenons son adresse Ethereum : 0xD7186D588Ed2AddF8b260d09B108100f264A64A9
+Les NFT unicolores appartiennent à Antrios, l'artiste mentionné dans l'énoncé. Sur [son profil](https://opensea.io/Antrios), on obtient son adresse Ethereum : 0xD7186D588Ed2AddF8b260d09B108100f264A64A9
 
 ## Flag
 
