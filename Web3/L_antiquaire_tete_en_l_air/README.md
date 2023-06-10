@@ -37,7 +37,7 @@ On tombe sur une image :
 <p align="center"><img src="mystere.png" alt="mystere" width="500"></p>
 
 On voit sur cette image ce qui peut ressembler une adresse de contrat sur une blockchain. On trouve sur Internet que Sepolia est une blockchain. On cherche le contrat que l'on a trouver sur  `https://sepolia.etherscan.io/`.  On y trouve le contrat et dans la partie "Constructor Arguments" il y a le flag.
-<p align="center"><img src="Constructor Arguments.png" alt="Constructor Arguments" width="800"></p>
+<p align="center"><img src="Constructor Arguments.png" alt="Constructor Arguments" width="1000"></p>
 
 
 ## Flag
