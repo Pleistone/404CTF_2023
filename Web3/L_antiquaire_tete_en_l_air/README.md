@@ -28,7 +28,7 @@ On cherche notre endpoint sur ipfs.io :
 `https://ipfs.io/ipfs/bafybeia5g2umnaq5x5bt5drt2jodpsvfiauv5mowjv6mu7q5tmqufmo47i/metadata.json`
 
 On tombe sur un fichier JSON :
-<p align="center"><img src="IPFS Json file.png" alt="IPFS Json file" width="500"></p>
+<p align="center"><img src="IPFS Json file.png" alt="IPFS Json file" width="700"></p>
 
 Dans ce Json, on trouve un autre endpoint également présent sur ipfs.io :
 `https://ipfs.io/ipfs/bafybeic6ea7qi5ctdp6s6msddd7hwuic3boumwknrirlakftr2yrgnfiga/mystere.png`
@@ -37,7 +37,7 @@ On tombe sur une image :
 <p align="center"><img src="mystere.png" alt="mystere" width="500"></p>
 
 On voit sur cette image ce qui peut ressembler une adresse de contrat sur une blockchain. On trouve sur Internet que Sepolia est une blockchain. On cherche le contrat que l'on a trouver sur  `https://sepolia.etherscan.io/`.  On y trouve le contrat et dans la partie "Constructor Arguments" il y a le flag.
-<p align="center"><img src="Constructor Arguments.png" alt="Constructor Arguments" width="500"></p>
+<p align="center"><img src="Constructor Arguments.png" alt="Constructor Arguments" width="800"></p>
 
 
 ## Flag
