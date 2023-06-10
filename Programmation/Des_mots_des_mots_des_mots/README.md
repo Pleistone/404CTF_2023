@@ -32,7 +32,7 @@ Entrée : {cosette}  Sortie : {cosette}
 Règle 1 : Inverser les lettres  
 Entrée : {cosette}  Sortie : {ettesoc}
 
-Règle 2 :\
+Règle 2 :
 - Si le mot à un nombre de lettres pair, échanger la 1ere et la 2e partie du mot obtenu  
 - Sinon, enlever toutes les lettres du mot correspondant à la lettre centrale  
 Entrée : {ettesoc}  Sortie : {ttsoc}
