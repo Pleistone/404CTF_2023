@@ -6,8 +6,8 @@
 
 Trois hommes sont attablés dans un coin du café. L'un d'eux, Serge, sort une tablette et montre avec beaucoup de fierté sa nouvelle acquisition : un NFT "blanc avec des liserés blancs transversaux". Ses deux amis ne semblent pas convaincus par cet achat :
 
-<p align="center"> MARC   </p>
-<p align="center"> Cher ? </p>
+<p align="center"> MARC   </p>   
+<br> Cher ? </p>
 
 <p align="center"> SERGE </p>   
 <p align="center"> Deux cent mille. </p>
