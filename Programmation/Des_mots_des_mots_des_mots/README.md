@@ -24,7 +24,7 @@ Indications :
 
 ## Solution
 
-Pour résoudre ce challenge, on se connecte au serveur à l'adresse `challenges.404ctf.fr:31420`. On nous donne ensuite les règles que nous devons appliquer pour traduire un mot. Une fois que la liste des règles nous a été donnée, le serveur nous envoie une grande liste de mots que nous devons traduire en quelques secondes. Voici la liste des règles :
+Pour résoudre ce challenge, on se connecte au serveur à l'adresse `challenges.404ctf.fr:31420`. On nous donne ensuite les règles que nous devons appliquer pour traduire un mot. Une fois que la liste des règles nous a été donnée, le serveur nous envoie une grande liste de mots que nous devons traduire en quelques secondes. Voici la liste des règles :   
 Règle 0 : Aucune modification   
 Entrée : {cosette}  Sortie : {cosette}
 
