@@ -6,27 +6,27 @@
 
 Trois hommes sont attablés dans un coin du café. L'un d'eux, Serge, sort une tablette et montre avec beaucoup de fierté sa nouvelle acquisition : un NFT "blanc avec des liserés blancs transversaux". Ses deux amis ne semblent pas convaincus par cet achat :
 
-<p align="center"> MARC </p>
+<p align="center"> MARC </p>   
 <p align="center"> Cher ? </p>
 
-<p align="center"> SERGE </p>
+<p align="center"> SERGE </p>   
 <p align="center"> Deux cent mille. </p>
 
-<p align="center"> MARC </p>
+<p align="center"> MARC </p>   
 <p align="center"> Deux cent mille ?... </p>
 
 <p align="center"> [...] </p>
 
-<p align="center"> SERGE </p>
+<p align="center"> SERGE </p>   
 <p align="center"> Mais mon vieux, c'est le prix. C'est un ANTRIOS ! </p>
 
-<p align="center"> MARC </p>
+<p align="center"> MARC </p>   
 <p align="center"> Tu n'as pas acheté ce tableau deux cent mille francs ! </p>
 
-<p align="center"> SERGE </p>
+<p align="center"> SERGE </p>   
 <p align="center"> J'étais sûr que tu passerais à côté. </p>
 
-<p align="center"> MARC </p>
+<p align="center"> MARC </p>   
 <p align="center"> Tu as acheté cette merde deux cent mille francs ?! </p>
 
 
