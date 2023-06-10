@@ -17,7 +17,7 @@ Le fichier est au format .raw, correspondant à des données brutes — on peut 
 
 ## Solution
 
-On ouvre le fichier .raw sur Audacity depuis le menu `Fichier > Importer > Données brutes (.raw)`. On accélère la vitesse de lecture en fois 4.5 et inverser le sens de lecture. On entend alors vers la fin une voix nous dire : "la solution est en hexadécimal 34 30 34 43 54 46 7b 31 74 72 30 5f 34 55 78 5f 52 34 64 31 30 2d 66 52 33 71 55 33 4e 63 33 35 7d". On déchiffre le message hexadécimal et on obtient le flag.
+On ouvre le fichier .raw sur Audacity en allant dans le menu `Fichier > Importer > Données brutes (.raw)`. Une fois le fichier importé, on augmente la vitesse de lecture de 4.5 fois et on inverse le sens de lecture. Vers la fin de l'audio, une voix nous donne le message suivant : "la solution est en hexadécimal 34 30 34 43 54 46 7b 31 74 72 30 5f 34 55 78 5f 52 34 64 31 30 2d 66 52 33 71 55 33 4e 63 33 35 7d". Nous déchiffrons ensuite ce message hexadécimal pour obtenir le flag.
 
 
 ## Flag
