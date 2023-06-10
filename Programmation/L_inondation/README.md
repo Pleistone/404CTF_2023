@@ -14,7 +14,7 @@ Curieux, vous sortez du café par cette porte et tombez nez à nez avec un jeune
 
 ## Solution
 
-Pour résoudre ce challenge, on se connecte au serveur à l'adresse challenges.404ctf.fr:31420. Le serveur nous envoie un message contenant une séquence de caractères représentant une des rhinocéros (i.e. la chaîne : ~c`°^). On dispose alors de quelques secondes pour compter le nombre de rhinocéros et envoyer la réponse. On doit répéter cette opération avec succès 100 fois pour obtenir le flag. Pour y parvenir, il est nécessaire d'automatiser le processus en utilisant un algorithme.
+Pour résoudre ce challenge, on se connecte au serveur à l'adresse `challenges.404ctf.fr:31420`. Le serveur nous envoie un message contenant une séquence de caractères représentant une des rhinocéros (i.e. la chaîne : ~c`°^). On dispose alors de quelques secondes pour compter le nombre de rhinocéros et envoyer la réponse. On doit répéter cette opération avec succès 100 fois pour obtenir le flag. Pour y parvenir, il est nécessaire d'automatiser le processus en utilisant un algorithme.
 
 
 ``` python
