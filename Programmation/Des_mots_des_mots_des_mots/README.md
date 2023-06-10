@@ -51,7 +51,7 @@ Si le mot a 3 lettres ou plus :
 - Si la 3e lettre du mot obtenu est une consonne, "décaler" les voyelles vers la gauche dans le mot original, puis réappliquer les règles 1 et 2.
 - Sinon : la même chose mais les décaler vers la droite.
 > Ex de décalage : poteau => petauo // drapeau => drupaea
-Entrée : {ttsoc}
+Entrée : {cosette, ttsoc}
 Sortie : {ottsc}
 >> Nous avons presque fini, la quatrième règle est la plus complexe.
 
