@@ -9,26 +9,25 @@ Trois hommes sont attablés dans un coin du café. L'un d'eux, Serge, sort une t
 <p align="center"> MARC  
 <br> Cher ? </p>
 
-<p align="center"> SERGE </p>   
-<p align="center"> Deux cent mille. </p>
+<p align="center"> SERGE   
+<br> Deux cent mille. </p>
 
-<p align="center"> MARC </p>   
-<p align="center"> Deux cent mille ?... </p>
+<p align="center"> MARC   
+<br> Deux cent mille ?... </p>
 
 <p align="center"> [...] </p>
 
-<p align="center"> SERGE </p>   
-<p align="center"> Mais mon vieux, c'est le prix. C'est un ANTRIOS ! </p>
+<p align="center"> SERGE 
+<br> Mais mon vieux, c'est le prix. C'est un ANTRIOS ! </p>
 
-<p align="center"> MARC </p>   
-<p align="center"> Tu n'as pas acheté ce tableau deux cent mille francs ! </p>
+<p align="center"> MARC   
+<br> Tu n'as pas acheté ce tableau deux cent mille francs ! </p>
 
-<p align="center"> SERGE </p>   
-<p align="center"> J'étais sûr que tu passerais à côté. </p>
+<p align="center"> SERGE   
+<br> J'étais sûr que tu passerais à côté. </p>
 
-<p align="center"> MARC </p>   
-<p align="center"> Tu as acheté cette merde deux cent mille francs ?! </p>
-
+<p align="center"> MARC    
+<br> Tu as acheté cette merde deux cent mille francs ?! </p>
 
 Qui achèterait une telle œuvre d'art ? Qui VENDRAIT une telle œuvre d'art ?   
 Trouvez l'adresse Ethereum de l'artiste.   
