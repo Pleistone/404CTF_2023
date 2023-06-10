@@ -22,7 +22,7 @@ Le mémo est en format hexadécimal. En le décodant, on découvre deux élémen
 - Un endpoint `/ipfs/bafybeia5g2umnaq5x5bt5drt2jodpsvfiauv5mowjv6mu7q5tmqufmo47i/metadata.json`.
 
 En cherchant sur le internet, on apprend que l'IPFS (InterPlanetary File System) est un système de fichiers distribués peer-to-peer conçu pour créer une infrastructure web plus décentralisée et plus résistante. Il s'agit d'un protocole qui permet de stocker et de récupérer des fichiers sans dépendre des serveurs centralisés traditionnels.
-On trouve comment l'utiliser sur ce site : `https://decrypt.co/resources/how-to-use-ipfs-the-backbone-of-web3`
+On trouve comment l'utiliser sur ce site : https://decrypt.co/resources/how-to-use-ipfs-the-backbone-of-web3
 
 On cherche notre endpoint sur ipfs.io :
 `https://ipfs.io/ipfs/bafybeia5g2umnaq5x5bt5drt2jodpsvfiauv5mowjv6mu7q5tmqufmo47i/metadata.json`
