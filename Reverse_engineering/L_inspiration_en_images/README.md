@@ -23,7 +23,8 @@ On décompile le fichier `vue_sur_un_etrange_tableau` avec Ghidra. On commence e
 
 <p align="center"><img src="Analyse du main.png" alt="Analyse du main" width="600"></p>
 
-Après une analyse rapide de la fonction main, on repère une instruction qui ressemble fortement à ce qui nous intéresse : `(*glad_glClearColor)(0x3e4ccccd,0x3e99999a,0x3e99999a,0x3f800000)`. En effet, il s'agit d'un vecteur au format (r,g,b,a) avec des valeurs correspondant à des nombres flottants. On utilise alors un [site en ligne](https://resource.heltec.cn/utils/hf) pour convertir ces nombres en flottant, et on obtient les valeurs suivantes : 0.2, 0.3, 0.3 et 1.0.
+Après une analyse rapide de la fonction main, on repère une instruction qui ressemble fortement à ce qui nous intéresse : `(*glad_glClearColor)(0x3e4ccccd,0x3e99999a,0x3e99999a,0x3f800000)`. En effet, il s'agit d'un vecteur au format (r,g,b,a) avec des valeurs correspondant à des nombres flottants. On utilise alors un [site en ligne](https://resource.heltec.cn/utils/hf) pour convertir les nombres hexadécimaux nombres en flottant, et on obtient les valeurs suivantes : 0.2, 0.3, 0.3 et 1.0.
+
 
 ## Flag
 
