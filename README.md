@@ -45,6 +45,7 @@ Les sources des challenges sont données dans le [Github du 404CTF 2023](https:/
 ## Radio-fréquences
 - [X] [Intro - Navi](./Radio_frequences/De_la_poesie)
 - [ ] [Avez-vous vu les cascades du hérisson ?](./Radio_frequences/Avez_vous_vu_les_cascades_du_herisson)
+- [ ] [Ballistic Missile Submarine](./Radio_frequences/Ballistic_missile_submarine)
 
 ## OSINT
 - [X] [Intro - Le tour de France](./Osint/Intro_le_tour_de_france/)
@@ -83,6 +84,6 @@ Les sources des challenges sont données dans le [Github du 404CTF 2023](https:/
 - [ ] [L'Épistolaire moderne](./Web/L_epistolaire_moderne/)
 
 ## Web3
-- [ ] [Intro - Art](./web3/Art/)
+- [ ] [Intro - Art](./Web3/Art/)
 - [ ] [L'Antiquaire, tête en l'air](./Web3/L_antiquaire_tete_en_l_air/)
 
