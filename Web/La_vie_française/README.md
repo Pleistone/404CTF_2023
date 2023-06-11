@@ -21,9 +21,7 @@ Rappel : L'utilisation de tout outil de bruteforce, dont sqlmap, est interdite.
 
 ## Solution
 
-Etant donner que dans l'énoncer on parle d'outil comme sqlmap on peut se douter qu'il vas probablement falloir faire une injection SQL.
-
-Pour ce challenge, nous arrivons sur une page avec un lien pour postuler (s'inscrire) ou pour se connecter : 
+Etant donner que dans l'énoncer on parle d'outil comme sqlmap on peut se douter qu'il vas probablement falloir faire une injection SQL. Pour ce challenge, nous arrivons sur une page avec un lien pour postuler (s'inscrire) ou pour se connecter : 
 
 <p align="center"><img src="Accueil.png" alt="Accueil" width="500"></p>
 
