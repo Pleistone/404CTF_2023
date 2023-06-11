@@ -15,8 +15,24 @@ Tandis que je m'essayais à son drôle jeu, il me présentait ses points de vue 
 
 ## Solution
 
+Pour ce challenge d'introduction au reverse, nous devons retrouver trois informations :  
+- le compilateur qui a servi lors de la création du programme  
+- la fonction permettant de vérifier le mot de passe  
+- le mot de passe.
 
+Pour la première partie, il suffisait d'importer le fichier dans un décompileur tel que Ghidra. Dans la fenêtre d'informations, nous voyons toutes les infos concernant le fichier, dont le "Compilator ID" : 
 
+<p align="center"><img src="Information.png" alt="Information" width="800"></p>
+
+Le compilateur est donc **GCC**. Maintenant, nous allons passer à l'analyse du programme divin-crackme. Pour ce faire, on commence par analyser la fonction main : 
+
+<p align="center"><img src="Fonction main.png" alt="Fonction main" width="800"></p>
+
+Dans le code, on trouve les informations qui nous manquent :
+- Le mot de passe est vérifié à l'aide de la fonction **strncmp** (string compare).
+- Le mot de passe est décomposé en 3 partie qui mis bout à bout donne **L4_pH1l0soPh13_d4N5_l3_Cr4cKm3**.
+
+On a désormais toutes les informations demandées.
 
 ## Flag
 
@@ -24,5 +40,5 @@ Tandis que je m'essayais à son drôle jeu, il me présentait ses points de vue 
 <summary> Flag 🚩</summary>
 
 ```
-404CTF{L4_pH1l0soPh13_d4N5_l3_Cr4cKm3}
+404CTF{gcc:strncmp:L4_pH1l0soPh13_d4N5_l3_Cr4cKm3}
 ```

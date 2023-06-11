@@ -27,7 +27,6 @@ Dans ce challenge vous devez trouver le mot de passe qui valide le crackme. L'ex
 
 
 
-
 ## Flag
 
 <details>
