@@ -9,8 +9,6 @@ Alors que vous voyez le texte suivant **ueomaspblbppadgidtfn**, Rimbaud vous dé
 
 > Format : 404CTF{cequevousalleztrouver}
 
-> <p align="center"> nc challenges.404ctf.fr 31451 </p>
-
 ## Solution
 
 ### Solution 1 
