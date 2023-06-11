@@ -24,7 +24,7 @@ On entre le login mot de passe et on est redirigé vers une [seconde page](https
 
 <p align="center"><img src="Cookie admin.png" alt="Cookie admin" width="500"></p>
 
-On passe la valeur de False à True, on recharge la page et on arrive alors sur une [troisiéme page](https://le-loup-et-le-renard.challenges.404ctf.fr/fable/partie-3-redirect) intitulée "Partie 3 Redirect". En regardant dans le code, on trouve dans le javasript l'adresse de la 4éme page `/fable/partie-4-flag-final`.
+On passe la valeur de **False** à **True**, on recharge la page et on arrive alors sur une [troisiéme page](https://le-loup-et-le-renard.challenges.404ctf.fr/fable/partie-3-redirect) intitulée "Partie 3 Redirect". En regardant dans le code, on trouve dans le javasript l'adresse de la 4éme page `/fable/partie-4-flag-final`.
 
 <p align="center"><img src="Redirection.png" alt="Redirection" width="500"></p>
 
