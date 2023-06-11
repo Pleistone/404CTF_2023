@@ -24,7 +24,7 @@ Pour la première partie, il suffisait d'importer le fichier dans un décompileu
 
 <p align="center"><img src="Information.png" alt="Information" width="800"></p>
 
-Le compilateur est donc **GCC**. Maintenant, nous allons passer à l'analyse du programme divin-crackme. Pour ce faire, on commence par analyser la fonction main : 
+Le compilateur est donc **GCC**. Maintenant, nous allons passer à l'analyse du programme `divin-crackme`. Pour ce faire, on commence par analyser la fonction main : 
 
 <p align="center"><img src="Fonction main.png" alt="Fonction main" width="600"></p>
 

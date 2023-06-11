@@ -19,7 +19,11 @@ Note : Le déchiffrage du message n'est pas nécessaire à la complétion du cha
 
 ## Solution
 
+On décompile le fichier `vue_sur_un_etrange_tableau` avec Ghidra. On commence ensuite par analyser la fonction main.
 
+<p align="center"><img src="Information.png" alt="Information" width="800"></p>
+
+Apres une analyse rapide d
 
 
 ## Flag
