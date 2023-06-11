@@ -19,7 +19,7 @@ Je te laisse un petit quelque chose. Prouve moi que tu peux lire entre les ligne
 
 Le challenge porte le nom d'Odobenus Rosmarus, qui est le nom d'une espèce de morse. De plus, dans le texte fourni dans l'énoncé, on peut remarquer de nombreux mots commençant par une majuscule. Ces lettres initiales sont toujours un C, un L ou un E, ce qui pourrait correspondre aux signaux Morse pour Court, Long et Espace, les trois caractères utilisés dans le code Morse. En mettant bout à bout ces caractères, on obtient la séquence suivante : CCLCECLELCLCECCECLCCECECLCCECELLELLLECLCECCCEC. On la traduit et on trouve le flag.
 
-<p align="center"><img src="Code morse.jpg" alt="Code morse" width="600"></p>
+<p align="center"><img src="Code morse.jpg" alt="Code morse" width="500"></p>
 
 
 ## Flag
