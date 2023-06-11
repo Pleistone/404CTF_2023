@@ -26,7 +26,7 @@ Pour la première partie, il suffisait d'importer le fichier dans un décompileu
 
 Le compilateur est donc **GCC**. Maintenant, nous allons passer à l'analyse du programme divin-crackme. Pour ce faire, on commence par analyser la fonction main : 
 
-<p align="center"><img src="Fonction main.png" alt="Fonction main" width="800"></p>
+<p align="center"><img src="Fonction main.png" alt="Fonction main" width="600"></p>
 
 Dans le code, on trouve les informations qui nous manquent :
 - Le mot de passe est vérifié à l'aide de la fonction **strncmp** (string compare).
