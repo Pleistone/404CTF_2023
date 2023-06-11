@@ -23,11 +23,11 @@ Pour mieux entendre, vous sortez votre antenne et mettez votre casque. Votre san
 
 On nous donne un fichier audio et on nous demande de régler la fréquence sur 192 kHz. On l'ouvre avec Audacity, on peut alors régler la fréquence en cliquant sur la flèche située près du nom du fichier audio :
 
-<p align="center"><img src="Réglage fréquence.png" alt="Réglage fréquence" width="800"></p>
+<p align="center"><img src="Réglage fréquence.png" alt="Réglage fréquence" width="500"></p>
 
 On affiche le spectrogramme et on applique un "zoom adapté", on obtient alors l'image suivante :
 
-<p align="center"><img src="Spectrogramme.png" alt="Spectrogramme" width="800"></p>
+<p align="center"><img src="Spectrogramme.png" alt="Spectrogramme" width="500"></p>
 
 À première vue, on ne voit rien, mais en zoomant, on se rend compte qu'il y a un code morse :
 
