@@ -1,6 +1,6 @@
 # Le Loup et le renard
 
-**Difficulté** : Facile
+**Difficulté** : Introduction
 
 ## Enoncé
 
