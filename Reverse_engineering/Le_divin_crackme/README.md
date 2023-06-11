@@ -15,12 +15,12 @@ Tandis que je m'essayais à son drôle jeu, il me présentait ses points de vue 
 
 ## Solution
 
-Pour ce challenge d'introduction au reverse, nous devons retrouver trois informations :  
+Pour ce challenge d'introduction au reverse engineering, nous devons retrouver trois informations :  
 - le compilateur qui a servi lors de la création du programme  
 - la fonction permettant de vérifier le mot de passe  
 - le mot de passe.
 
-Pour la première partie, il suffisait d'importer le fichier dans un décompileur tel que Ghidra. Dans la fenêtre d'informations, nous voyons toutes les infos concernant le fichier, dont le "Compilator ID" : 
+Pour la première partie, il suffisait d'importer le fichier dans un décompileur tel que Ghidra. Dans la fenêtre d'informations, nous voyons toutes les infos concernant le fichier, dont le "Compiler ID" : 
 
 <p align="center"><img src="Information.png" alt="Information" width="800"></p>
 
