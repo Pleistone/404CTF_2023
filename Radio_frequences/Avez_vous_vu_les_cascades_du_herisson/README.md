@@ -33,7 +33,7 @@ On voit bien que l'on est sur la bonne piste, mais le texte n'est pas tout à fa
 
 On prend une capture d'écran du spectrogramme et on l'édite un peu pour rendre le tout un peu plus lisible : 
 
-<p align="center"><img src="Image editer.png" alt="Image editer" width="400"></p>
+<p align="center"><img src="Image editer.png" alt="Image editer" width="750"></p>
 
 
 ## Flag
