@@ -1,27 +1,39 @@
-# Avez-vous vu les cascades du hérisson ?
+# Ballistic Missile Submarine
 
-**Difficulté** : Facile
+**Difficulté** : Moyen
 
 ## Enoncé
 
-Après avoir rencontré Simone, cette dernière vous propose de découvrir une nouvelle personne. Quoi de mieux qu’un cache-cache pour apprendre à mieux se connaître ? Cela vous changera de l'air du café littéraire Le Procope.
+Un regard vers la fenêtre vitreuse et couverte d'une fine pellicule de saleté : toujours autant d'eau tombe du ciel. Un souvenir vous revient : votre séjour en Normandie, à musarder sur les plages du débarquement. En mentionnant ce souvenir dans un léger, tenace, et non sans discrétion soupir, vous percevez de votre œil vif la teinte rougissante de Simone de Beauvoir s'instaurer sur sa joue. Effectivement, par le passé elle fut sujette à des problèmes durant la deuxième guerre mondiale, par sa liaison avec Bianca Bienenfeld, fille d'un juif polonnais.
 
-Vous arrivez dans un lieu qui lui est cher, un lieu d’enfance rempli de souvenirs. C’est ici qu’elle passait ces vacances d’Été, dans le parc de Meyrignac, fondé en 1880 par son grand père Ernest BERTRAND DE BEAUVOIR.
+Les souvenirs de la Seconde Guerre, les navires de guerre, les sous-marrins... Votre esprit entourloupé par cette période ne remarque point l'arrivé d'un certain Paul Verlaine. En se posant avec une tasse d'eau à la main, il vous questionne sur votre torpeur. Aux souvenirs anciens, il vous livre un poème. A la lecture de la première ligne, plus aucun doute : elle fut récitée pour prévenir les résistants de l'organisation du débarquement, à travers la radio, avec l'émission Radio Londres.
 
-Lors de votre partie, non loin de là, vous parvenez habilement à trouver Simone, cependant le troisième joueur demeure parfaitement introuvable. Votre cerveau titanesque a eu la bonne idée de faire ce jeu dehors, en pleine nature, pour plus de difficulté. Sublime. Vous voilà errant au milieu de nulle part. Toutefois, un bruit vous attire :
+Par le hasard le plus fortuit, ou bien parce que l'histoire se déroule précisément selon la volonté de l'auteur, votre oreille se dresse telle le loup chassant sa proie. Votre ouïe devient aussi aiguisé qu'un couteau qu'utiliserait un boucher pour découper votre viande du dimanche matin.
 
-« SPLASHHHH... SHHHHH... SPLASHHHH... SHHHHH... » (Le son d'une cascade d'eau qui tombe et qui ruisselle)
+A la radio, le morceau de musique touche à sa fin. Vient ensuite les premières notes de la 5ème symphonie de Beethoven, mais s'arrête brusquement, laissant place à une voix :
 
-Cette chute d'eau paraît ordinaire et suspicieuse. Peut-être parviendrez-vous à trouver ce charmant flibustier à travers les cascades du Hérisson avant qu'il soit l'heure de rentrer au Procope ?
+« Les Français parlent aux Français. Veuillez écouter d’abord quelques messages personnels. »
 
-Vous avez un oeil de lynx, ainsi vous apercevez que la chute d'eau s'écoule à une fréquence de 2 MHz
+Pour mieux entendre, vous sortez votre antenne et mettez votre casque. Votre sang se glace...
 
-> Format du flag : 404CTF{ceci_est_un_flag}
+> Mettez un casque, réglez la fréquence à 192 kHz
 
 
 ## Solution
 
-<p align="center"><img src="Volatility processus.png" alt="Volatility processus" width="800"></p>
+On nous donne un fichier audio et on nous demande de régler la fréquence sur 192 kHz. On l'ouvre avec Audacity, on peut alors régler la fréquence en cliquant sur la flèche située près du nom du fichier audio :
+
+<p align="center"><img src="Réglage fréquence.png" alt="Réglage fréquence" width="800"></p>
+
+On affiche le spectrogramme et on applique un "zoom adapté", on obtient alors l'image suivante :
+
+<p align="center"><img src="Spectrogramme.png" alt="Spectrogramme" width="800"></p>
+
+À première vue, on ne voit rien, mais en zoomant, on se rend compte qu'il y a un code morse :
+
+<p align="center"><img src="Code morse.png" alt="Code morse" width="800"></p>
+
+On traduit ce code morse sur [Cyberchef](https://cyberchef.org/#recipe=From_Morse_Code('Space','Line%20feed')) et on obtient le flag.
 
 ## Flag
 
@@ -29,5 +41,5 @@ Vous avez un oeil de lynx, ainsi vous apercevez que la chute d'eau s'écoule à 
 <summary> Flag 🚩</summary>
 
 ```
-404CTF{413x4ndR3_d4n5_Un3_C45c4d35_?}
+404CTF{P4UL_V3R14IN3_35T_UN_M0R53_?}
 ```

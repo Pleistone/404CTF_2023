@@ -23,7 +23,7 @@ Vous avez un oeil de lynx, ainsi vous apercevez que la chute d'eau s'écoule à 
 
 Le principe du challenge est de regarder le spectrogramme du signal, ou waterfall en anglais. C'est une représentation temps-fréquence en 3D, où apparaissent le temps, la fréquence et la répartition d'énergie. On ouvre le fichier .raw sur Audacity en allant dans le menu `Fichier > Importer > Données brutes (.raw)`. Avant de valider l'importation, nous cliquons sur "Detect" pour obtenir les meilleurs paramètres d'importation.
 
-Une fois le fichier ouvert, nous affichons le spectrogramme et on applique un "zoom adapté", on obtient alors l'image suivante :
+Une fois le fichier ouvert, on affiche le spectrogramme et on applique un "zoom adapté", on obtient alors l'image suivante :
 
 <p align="center"><img src="Audacity spectrogramme.png" alt="Audacity spectrogramme" width="900"></p>
 
