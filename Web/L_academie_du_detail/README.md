@@ -21,6 +21,30 @@ Toutes les informations nécéssaires à la résolution de ce challenge sont pr�
 
 ## Solution
 
+Pour ce challenge de web, nous arrivons sur une page d'accueil avec un carrousel, beaucoup de mots et un espace de connexion. On peut dans un premier temps regarder le code source de la page mais rien d'intéressant à l'intérieur. La partie qui peut être très intéréssante est celle de la page de connexion :  
+
+<p align="center"><img src="Login page.png" alt="Login page" width="500"></p>
+
+Pour ce connecter, il faut un nom d'utilisateur et un mot de passe (logique). On essaye tout de suite le couple admin/amin pour voir si l'administrateur du site ne serait pas trop bête.
+Résultat : 
+
+<p align="center"><img src="Connexion admin refuser.png" alt="Connexion admin refuser" width="500"></p>
+
+On teste avec d'autre mot de passe mais on à toujours la même erreur. Passons à un autre utilisateur comme test,user ou pseudo. Quand nous testons, peu importe le mot de passe donné, nous parvenons à nous connecter : 
+
+<p align="center"><img src="Connexion utilisateur.png" alt="Connexion utilisateur" width="500"></p>
+
+Une nouvelle page a été débloquée : "Liste des membres". Si nous souhaitons y accéder, voici le résultat que nous avons : 
+
+<p align="center"><img src="Liste Membres inaccessible.png" alt="Liste Membres inaccessible" width="500"></p>
+
+Le résultat n'est toujours pas convaincant... Mais maintenant on sait que l'on doit trouver un moyen de se connecter au compte admin pour accéder à la page "Liste des Membres". En regardant le code, on voit qu'en se connectant, on récupère un cookie de connexion plus précisément un JWT Token. En allant sur [jwt.io](https://jwt.io/) et en mettant le token récupéré, nous pouvons voir les infos remplies lors de l'envoi du formulaire de connexion : 
+
+<p align="center"><img src="JWT Token.png" alt="JWT Toke" width="500"></p>
+
+En regardant les différentes vulnérabilités des tokens JWT, on trouve une attaque du nom de "none token signature" qui consiste à passer l'algorithme à null dans le header. C'est ce qu'on va faire à l'aide du site https://www.gavinjl.me/edit-jwt-online-alg-none/ et on vas en même temps changer le username en admin. On remplace alors la valeur du token actuel par celle du nouveau token. On essayer d'accéder à la page "Liste des Membres" et ça marche !
+
+<p align="center"><img src="Flag.png" alt="Flag" width="500"></p>
 
 
 ## Flag
