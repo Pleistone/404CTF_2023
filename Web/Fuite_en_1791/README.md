@@ -33,7 +33,7 @@ Il faut donc probablement trouver un moyen d'acceder a cette page. En examinant 
 
 Il faudra donc faire preuve de plus de subtilité dans la manière de modifier l'URL. Après quelques recherches, on découvre rapidement une vulnérabilité appelée "[parameter-pollution](https://book.hacktricks.xyz/pentesting-web/parameter-pollution)". Elle consiste à inclure plusieurs fois le même paramètre, ce qui peut entraîner différentes vulnérabilités selon la façon dont le parsing est réalisé.
 
-On effectue donc une requête sur l'URL suivante : `https://ddfc.challenges.404ctf.fr/ddfc?expiry=-5625891076&signature=wawF6dC4Hz9g5NyCc3j1KCDcfztFE/sp&expiry=5625891076`3. Cette fois-ci, le lien fonctionne et on est dirigé vers une page où le flag se trouve à la fin.
+On effectue donc une requête sur l'URL suivante : `https://ddfc.challenges.404ctf.fr/ddfc?expiry=-5625891076&signature=wawF6dC4Hz9g5NyCc3j1KCDcfztFE/sp&expiry=5625891076`. Cette fois-ci, le lien fonctionne et on est dirigé vers une page où le flag se trouve à la fin.
 
 <p align="center"><img src="Flag page.png" alt="Flag page" width="500"></p>
 
