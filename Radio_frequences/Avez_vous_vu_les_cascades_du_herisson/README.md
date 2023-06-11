@@ -25,15 +25,15 @@ Le principe du challenge est de regarder le spectrogramme du signal, ou waterfal
 
 Une fois le fichier ouvert, nous affichons le spectrogramme et on applique un "zoom adapté", on obtient alors l'image suivante :
 
-<p align="center"><img src="Audacity spectrogramme.png" alt="Audacity spectrogramme" width="800"></p>
+<p align="center"><img src="Audacity spectrogramme.png" alt="Audacity spectrogramme" width="900"></p>
 
 On voit bien que l'on est sur la bonne piste, mais le texte n'est pas tout à fait visible. On va donc modifier les paramètres du spectrogramme : 
 
-<p align="center"><img src="Spectrogramme ajuste.png" alt="Spectrogramme ajusté" width="800"></p>
+<p align="center"><img src="Spectrogramme ajuste.png" alt="Spectrogramme ajusté" width="900"></p>
 
 On prend une capture d'écran du spectrogramme et on l'édite un peu pour rendre le tout un peu plus lisible : 
 
-<p align="center"><img src="Image editer.png" alt="Image editer" width="800"></p>
+<p align="center"><img src="Image editer.png" alt="Image editer" width="500"></p>
 
 
 ## Flag
