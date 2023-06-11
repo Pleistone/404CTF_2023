@@ -21,6 +21,23 @@ Rappel : L'utilisation de tout outil de bruteforce, dont sqlmap, est interdite.
 
 ## Solution
 
+Etant donner que dans l'énoncer on parle d'outil comme sqlmap on peut se douter qu'il vas probablement falloir faire une injection SQL.
+
+Pour ce challenge, nous arrivons sur une page avec un lien pour postuler (s'inscrire) ou pour se connecter : 
+
+<p align="center"><img src="Accueil.png" alt="Accueil" width="500"></p>
+
+Dans un premier temps, nous pouvons tester de nous inscrire pour voir ce qu'il est possible d'avoir. On peut tenter de s'inscrire avec le pseudo admin, mais il y a un message d'erreur. On tente également des injections SQL mais on a rien de probant. On va donc simplement créer un compte user.
+
+<p align="center"><img src="Page d'enregistrement.png" alt="Enregistrement" width="500"></p>
+
+On passe maintenant à la page de connexion. On essaye à nouveau le pseudo admin ou des injection SQL, mais toujours rien. On va donc simplement de connecter avec l'utilisateur que l'on a créé.
+
+<p align="center"><img src="Page de connexion.png" alt="Page de connexion" width="500"></p>
+
+On arrive alors sur un espace personnel avec rien de particulier a premiere vue, on a juste un lien vers la page d'acceuil.
+
+<p align="center"><img src="Profil.png" alt="Profil" width="500"></p>
 
 
 ## Flag
