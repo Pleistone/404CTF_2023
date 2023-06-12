@@ -34,7 +34,7 @@ Mais en examinant plus en détail, on constate qu'il suffit que le mot de passe 
 
 <p align="center"><img src="Equations liées.png" alt="Equations liées" width="400"></p>
 
-Tous ces critères font que l'on a une solution unique pour chaque triplet de lettre. La résolution est implémentée dans solve.py.
+Tous ces critères font que l'on a une solution unique pour chaque triplet de lettre. La résolution est implémentée dans `solve.py`.
 
 
 ## Flag
