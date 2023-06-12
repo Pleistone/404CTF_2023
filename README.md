@@ -63,7 +63,6 @@ Les sources des challenges sont données dans le [Github du 404CTF 2023](https:/
 - [X] [Intro - Le divin crackme](./Reverse_engineering/Le_divin_crackme/)
 - [X] [L'inspirations en images](./Reverse_engineering/L_inspiration_en_images/)
 - [X] [Encore une mise à jour !](./Reverse_engineering/Encore_une_mise_a_jour/)
-- [ ] [Introspection](./Reverse_engineering/Introspection/)
 
 ## Steganographie
 - [X] [Intro - Odobenus Rosmarus](./Steganographie/Odobenus_rosmarus/)
