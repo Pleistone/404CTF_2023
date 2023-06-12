@@ -15,7 +15,7 @@ Toutes les informations nécéssaires à la résolution de ce challenge sont pr�
 
 On commence par exécuter le fichier pour observer le comportement du programme :
 
-<p align="center"><img src="Execution du programme.png" alt="Execution du programme" width="400"></p>
+<p align="center"><img src="Execution du programme.png" alt="Execution du programme" width="800"></p>
 
 Après avoir testé les différentes fonctionnalités, on passe à une analyse plus approfondie en décompilant le programme "la_cohue" avec Ghidra. En regardant la liste des fonctions on remaque une fonction `canary()` qui permet d'afficher le flag :
 
@@ -40,7 +40,7 @@ void canary(void){
 }
 ```
 
-Y a plus qu'à trouver un moyen l'appeler. On a un `printf` vulnérable dans l'option `2` du programme : 
+Y a plus qu'à trouver un moyen l'appeler. On a un `printf` vulnérable dans l'option `2 : Réfléchir à un moyen de capturer le canari` du programme : 
 ```c
 fgets(user_says,0x40,stdin);
 ...
@@ -48,7 +48,7 @@ printf(user_says);
 ...
 ```
 
-Qui va-nous permettre de faire fuiter la stack, par exemple mettant en entrée la chaîne de caractère `%17$p` on récupère la position du canary dans la stack. Puis avec l'option `1` une autre vulnérabilité va nous permettre d'écrire sur la stack, pour écraser l'adresse de retour de la fonction par l'adresse de la fonction `canary()`.
+Qui va-nous permettre de faire fuiter la stack, par exemple mettant en entrée la chaîne de caractère `%17$p` on récupère la position du canary dans la stack. Puis avec l'option `1 : Aller voir Francis` une autre vulnérabilité va nous permettre d'écrire sur la stack, pour écraser l'adresse de retour de la fonction par l'adresse de la fonction `canary()`.
 
 ```c
 fgets(user_says,0x40,stdin);
