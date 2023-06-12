@@ -43,8 +43,21 @@ contract Jeu {
     }
 ```
 
-Dans ce code, on voit que le contrat est initialisé la valeur _start passer en entrée du constructeur : 
+Dans ce code, on voit que le contrat est initialisé la valeur `_start` passer en entrée du constructeur. 
+```Solidity
+constructor(uint _start) {
+    currentState = _start;
+}
+```
 
+Cette valeur n'est pas connue mais peut être trouvée. Apres l'initialisation du contrat, nous pouvons utiliser la fonction `guess` pour essayer de deviner la valeur correcte et obtenir le drapeau. Comme nous pouvons le voir dans le code ci-dessous, nous devons calculer la valeur de _start a, c et m :
+```Solidity
+function guess(uint _next) public returns (bool) {
+    currentState = (a * currentState + c) % m;
+    isSolved = (_next == currentState) || isSolved;
+    return isSolved;
+}
+```
 
 <p align="center"><img src="Constructor Arguments.png" alt="Constructor Arguments" width="1000"></p>
 
