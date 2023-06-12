@@ -18,7 +18,7 @@ On nous donne le texte suivant :
 Le principe utilisé repose sur les [autostéréogrammes](https://fr.wikipedia.org/wiki/Autost%C3%A9r%C3%A9ogramme). Le créateur du challenge a donc appliqué ce principe au texte (stéréogramme ASCII). Il faut donc superposer le texte de droite et de gauche, puis d'observer les mots qui ressortent. En effet, les deux textes sont quasiment identique, mais quelques espaces ne sont pas exactement au même endroit à droite et à gauche. Ainsi, si on superpose les deux textes, tous les mots se superposent parfaitement sauf quelques mots. Ces mots forment le message recherché.
 
 Voile ce que ca donne :
-<p align="center"><img src="Superposition.png" alt="Superposition" width="200"></p>
+<p align="center"><img src="Superposition.png" alt="Superposition" width="250"></p>
 
 On peut distinguer deux messages différents en classant les mots en fonction de leur décalage vers la droite ou vers la gauche dans le texte de droite par rapport au mot du texte de gauche. Cela donne les deux messages suivants :
 - Paris Finlande 15 6 avion
