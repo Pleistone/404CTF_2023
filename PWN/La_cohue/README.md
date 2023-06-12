@@ -17,8 +17,7 @@ On commence par exécuter le fichier pour observer le comportement du programme 
 
 <p align="center"><img src="Execution du programme.png" alt="Execution du programme" width="800"></p>
 
-Après avoir testé les différentes fonctionnalités, on passe à une analyse plus approfondie en décompilant le programme "la_cohue" avec Ghidra. En regardant la liste des fonctions on remaque une fonction `canary()` qui permet d'afficher le flag :
-
+Après avoir testé les différentes fonctionnalités, on passe à une analyse plus approfondie en décompilant le programme "la_cohue" avec Ghidra. En regardant la liste des fonctions on remaque une fonction `canary()` qui permet d'afficher le flag : 
 ```c
 void canary(void){
   FILE *__stream;
@@ -40,19 +39,25 @@ void canary(void){
 }
 ```
 
-Y a plus qu'à trouver un moyen l'appeler. On a un `printf` vulnérable dans l'option `2 : Réfléchir à un moyen de capturer le canari` du programme : 
+Il faut donc trouver un moyen d'appeler la fonction `canary()`. On regarde alors la fonction `choices()` qui implémente les différents choix que l'on pouvait voir lorsqu'on a testé le programme. On voit alors un `printf` vulnérable dans l'option `1 : Aller voir Francis` du programme : 
 ```c
-fgets(user_says,0x40,stdin);
-...
-printf(user_says);
-...
+fgets(local_58,0x40,stdin);
+fgets(local_58,0x40,stdin);
+printf("[Vous] : ");
+printf(local_58);
+puts("");
+bVar2 = true
 ```
 
-Qui va-nous permettre de faire fuiter la stack, par exemple mettant en entrée la chaîne de caractère `%17$p` on récupère la position du canary dans la stack. Puis avec l'option `1 : Aller voir Francis` une autre vulnérabilité va nous permettre d'écrire sur la stack, pour écraser l'adresse de retour de la fonction par l'adresse de la fonction `canary()`.
+Il va-nous permettre de faire fuiter la stack, par exemple mettant en entrée la chaîne de caractère `%17$p` on récupère la position du canary dans la stack. Puis avec l'option `2 : Réfléchir à un moyen de capturer le canari` une autre vulnérabilité va nous permettre d'écrire sur la stack, pour écraser l'adresse de retour de la fonction par l'adresse de la fonction `canary()`.
 
 ```c
-fgets(user_says,0x40,stdin);
-gets(user_says);
+puts(&DAT_00400cd0);
+printf("[Vous] : ");
+fgets(local_58,0x40,stdin);
+gets(local_58);
+puts(&DAT_00400d50);
+bVar1 = true;
 ```
 
 On code appliquant cela est implémenté dans `solve.py`.
