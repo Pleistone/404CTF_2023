@@ -66,7 +66,7 @@ void view_flag(int *param_1) {
 }
 ```
 
-On vois donc que pour avoir le flag il faut que la valeur de `*param_1` ou `param_1[1]` soit supérieur à 150. En allant dans la fonction `createCharacter` on voit que ces valeurs correspondent à notre force et à notre intelligence, 2 valeurs qui sont initialisées à respectivement 100 et 50 au début du programme.
+On vois donc que pour avoir le flag il faut que la valeur de `*param_1` ou `param_1[1]` soit supérieur à 150. En allant dans la fonction `createCharacter` on voit que ces valeurs correspondent à notre FORCE et à notre INTELLIGENCE, 2 valeurs qui sont initialisées à respectivement 100 et 50 au début du programme.
 
 ```c
 undefined4 * createCharacter(undefined4 param_1,undefined4 param_2,undefined4 param_3) {
@@ -81,7 +81,7 @@ undefined4 * createCharacter(undefined4 param_1,undefined4 param_2,undefined4 pa
 }
 ```
 
-Il faut donc trouver un moyen d'augmenter notre force ou notre intelligence à plus de 150. On analyse alors les autres fonctions. Tout d'abord, on peut acheter un élixir avec la fonction `buyStrUpPotion` :
+Il faut donc trouver un moyen d'augmenter notre FORCE ou notre INTELLIGENCE à plus de 150. On analyse alors les autres fonctions. Tout d'abord, on peut acheter un élixir avec la fonction `buyStrUpPotion` :
 
 ```c
 void buyStrUpPotion(long joueur){
@@ -138,7 +138,7 @@ void sendMessage(void){
 }
 ```
 
-Qui alloue aussi une zone mémoire pour recevoir notre message, comme la zone précédemment utilisée pour l'élixir est considérée comme libre, elle va être utilisée. On fait ça 5 fois de suite et on augmente les points de FORCE. Si ont veut augmenter l'intelligence, l'idée est la même, mais en plus on va écraser le pointeur vers `incStr()` par l'adresse de `incInt()`
+Qui alloue aussi une zone mémoire pour recevoir notre message, comme la zone précédemment utilisée pour l'élixir est considérée comme libre, elle va être utilisée. On fait ça 5 fois de suite et on augmente les points de FORCE. Si ont veut augmenter l'INTELLIGENCE, l'idée est la même, mais en plus on va écraser le pointeur vers `incStr()` par l'adresse de `incInt()`
 
 On code appliquant cela est implémenté dans `solve.py`.
 
