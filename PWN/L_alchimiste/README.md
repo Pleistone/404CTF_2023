@@ -23,11 +23,11 @@ Toutes les informations nécéssaires à la résolution de ce challenge sont pr�
 
 On commence par exécuter le fichier pour observer le comportement du programme :
 
-<p align="center"><img src="Execution du programme.png" alt="Execution du programme" width="500"></p>
+<p align="center"><img src="Execution du programme.png" alt="Execution du programme" width="700"></p>
 
 Après avoir testé les différentes fonctionnalités, on passe à une analyse plus approfondie en décompilant le programme "l_alchimiste" avec Ghidra. On commence ensuite par analyser la fonction main :
 
-<p align="center"><img src="Main function.png" alt="Main function" width="500"></p>
+<p align="center"><img src="Main function.png" alt="Main function" width="300"></p>
 
 On y retrouve les différentes fonctions que l'on a pu appeler lors de l'exécution du programme. On va donc analyser le fonctionnement de ces fonctions, en commençant par `view_flag()`, qui devrait être la fonction qui renvoie le flag.
 ```c
