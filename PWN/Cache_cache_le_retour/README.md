@@ -17,7 +17,21 @@ Toutes les informations nécéssaires à la résolution de ce challenge sont pr�
 
 ## Solution
 
+On commence par exécuter le fichier pour observer le comportement du programme :
 
+<p align="center"><img src="Execution du programme.png" alt="Execution du programme" width="800"></p>
+
+Après avoir testé le fonctionnement du programme, on se lance dans une analyse approfondie en décompilant le programme `cache_cache_le_retour` avec Ghidra. Tout d'abord, il est nécessaire de trouver un mot de passe. Ce mot de passe est généré selon un certain algorithme qui utilise des nombres aléatoires générés à partir d'un seed. Cette seed est basé sur l'heure actuelle précise à la seconde prêt, elle est obtenue grâce à la fonction `time(0)`. Ainsi, si on recode exactement cet algorithme et qu'on le lance simultanément avec la commande `nc challenges.404ctf.fr 31725`, on serat en mesure d'obtenir le mot de passe à fournir au Portier. Cet algorithme est recodé dans ``
+
+Dans un second temps, on se retrouve face à un garde, et il nous faut envoyer la base64 d'un fichier zip nommé `mystere.zip`, contenant un fichier appelé `surprise.txt`. En retour, le programme affichera le contenu de "surprise.txt". Afin d'accéder à la salle au trésor, on utilisera la vulnérabilité "zip symbolic link", qui consiste à faire de `surprise.txt` un lien symbolique vers le fichier `salle_au_tresor`. Ainsi, lorsque le programme ouvrira le zip et cherchera à lire le contenu de "surprise.txt", il sera redirigé vers "salle_au_tresor". Pour créer un tel zip, on utilise les commandes suivantes :
+
+```shell
+echo 'mon message' > salle_au_tresor
+ln -s salle_au_tresor surprise.txt
+zip --symlinks test.zip surprise.txt
+```
+
+Une foit cela fait le flag s'affiche.
 
 ## Flag
 
