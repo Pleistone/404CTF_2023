@@ -30,7 +30,7 @@ Ensuite, une fonction `check` est appelée, où l'on trouve un ensemble de 64 é
 
 <p align="center"><img src="Equations.png" alt="Equations" width="400"></p>
 
-Mais en examinant plus en détail, on constate qu'il suffit que le mot de passe respecte au moins 32 des équations, ce qui est cohérent lorsque l'on remarque que deux équations identiques doivent donner des résultats différents pour la même paire de triplets, ce qui est impossible. Le mot de passe peut donc satisfaire au maximum la moitié des équations, soit 32 équations.  De plus, il est à noter que chaque triplet de lettres est impliqué dans deux équations distinctes. Enfin, il est important de souligner que les solutions de ces équations doivent être des entiers.
+Mais en examinant plus en détail, on constate qu'il suffit que le mot de passe respecte au moins 32 des équations, ce qui est cohérent lorsque l'on remarque que deux équations identiques doivent donner des résultats différents pour la même paire de triplets, ce qui est impossible. Le mot de passe peut donc satisfaire au maximum la moitié des équations, soit 32 équations.  De plus, il est à noter que chaque triplet de lettres est impliqué exactement dans deux équations distinctes. Enfin, il est important de souligner que les solutions de ces équations doivent être des entiers.
 
 <p align="center"><img src="Equations liées.png" alt="Equations liées" width="400"></p>
 
