@@ -50,7 +50,7 @@ constructor(uint _start) {
 }
 ```
 
-Cette valeur n'est pas connue mais peut être trouvée. Apres l'initialisation du contrat, nous pouvons utiliser la fonction `guess` pour essayer de deviner la valeur correcte et obtenir le drapeau. Comme nous pouvons le voir dans le code ci-dessous, nous devons calculer la valeur de _start a, c et m :
+Cette valeur n'est pas connue, mais peut être trouvée. Après l'initialisation du contrat, nous pouvons utiliser la fonction `guess` pour essayer de deviner la valeur correcte et d'obtenir le flag. Comme on peut le voir dans le code ci-dessous, on a besoin des valeurs de _start a, c et m pour calculer la valeur correcte.
 ```Solidity
 function guess(uint _next) public returns (bool) {
     currentState = (a * currentState + c) % m;
@@ -58,6 +58,9 @@ function guess(uint _next) public returns (bool) {
     return isSolved;
 }
 ```
+
+Pour trouver la valeur _start, on peut utiliser le site Try Ethernal. Cela nous permet de voir tous les blocs nouvellement créés et d'obtenir celui avec la valeur _start donnée au constructeur.
+
 
 <p align="center"><img src="Constructor Arguments.png" alt="Constructor Arguments" width="1000"></p>
 
