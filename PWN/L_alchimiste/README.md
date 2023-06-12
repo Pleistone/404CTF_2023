@@ -27,7 +27,7 @@ On commence par exécuter le fichier pour observer le comportement du programme 
 
 Après avoir testé les différentes fonctionnalités, on passe à une analyse plus approfondie en décompilant le programme "l_alchimiste" avec Ghidra. On commence ensuite par analyser la fonction main :
 
-<p align="center"><img src="Main function.png" alt="Main function" width="300"></p>
+<p align="center"><img src="Main function.png" alt="Main function" width="400"></p>
 
 On y retrouve les différentes fonctions que l'on a pu appeler lors de l'exécution du programme. On va donc analyser le fonctionnement de ces fonctions, en commençant par `view_flag()`, qui devrait être la fonction qui renvoie le flag.
 ```c
@@ -66,7 +66,7 @@ void view_flag(int *param_1) {
 }
 ```
 
-On vois donc que pour avoir le flag il faut que la valeur de `*param_1` ou `param_1[1]` soit supérieur à 150. En allant dans le programme `createCharacter` on voit que ces valeurs correspondent à notre force et à notre intelligence, 2 valeurs qui sont initialisées à respectivement 100 et 50 au début du programme.
+On vois donc que pour avoir le flag il faut que la valeur de `*param_1` ou `param_1[1]` soit supérieur à 150. En allant dans la fonction `createCharacter` on voit que ces valeurs correspondent à notre force et à notre intelligence, 2 valeurs qui sont initialisées à respectivement 100 et 50 au début du programme.
 
 ```c
 undefined4 * createCharacter(undefined4 param_1,undefined4 param_2,undefined4 param_3) {
@@ -81,9 +81,8 @@ undefined4 * createCharacter(undefined4 param_1,undefined4 param_2,undefined4 pa
 }
 ```
 
-Il faut donc trouver un moyen d'augmenter notre force ou notre intelligence à plus de 150. On analyse alors les autres fonctions.
+Il faut donc trouver un moyen d'augmenter notre force ou notre intelligence à plus de 150. On analyse alors les autres fonctions. Tout d'abord, on peut acheter un élixir avec la fonction `buyStrUpPotion` :
 
-Tout d'abord, on peut acheter un élixir :
 ```c
 void buyStrUpPotion(long joueur){
   long *elixir;
@@ -105,9 +104,7 @@ void buyStrUpPotion(long joueur){
 }
 ```
 
-Si on a assez d'argent, un pointeur vers "l'élixir" est ajouté dans la structure `joueur`.
-
-Ensuite on peut appeler la fonction `useItem()` pour consommer cet élixir :
+Si on a assez d'argent, un pointeur vers "l'élixir" est ajouté dans la structure `joueur`. Ensuite on peut appeler la fonction `useItem()` pour consommer cet élixir :
 
 ```c
 void useItem(long joueur){
@@ -125,9 +122,7 @@ void useItem(long joueur){
 }
 ```
 
-Elle vérifie qu'on a bien un élixir (ie le pointeur précédent), à la fin le `free()` libère l'emplacement mémoire utilisé par l'élixir, mais ne le remet pas à null, il est donc toujours présent dans la structure `joueur`.
-
-Problème, si on consomme à nouveau un élixir, on a un double free et le programme crash.
+Elle vérifie qu'on a bien un élixir (ie le pointeur précédent), à la fin le `free()` libère l'emplacement mémoire utilisé par l'élixir, mais ne le remet pas à null, il est donc toujours présent dans la structure `joueur`. Problème, si on consomme à nouveau un élixir, on a un double free et le programme crash.
 
 En revanche, on peut appeler `sendMessage()`
 
@@ -143,11 +138,7 @@ void sendMessage(void){
 }
 ```
 
-Qui alloue aussi une zone mémoire pour recevoir notre message, comme la zone précédemment utilisée pour l'élixir est considérée comme libre, elle va être utilisée.
-
-On fait ça 5 fois de suite et on augmente les points de FORCE.
-
-Si ont veut augmenter l'intelligence, l'idée est la même, mais en plus on va écraser le pointeur vers `incStr()` par l'adresse de `incInt()`
+Qui alloue aussi une zone mémoire pour recevoir notre message, comme la zone précédemment utilisée pour l'élixir est considérée comme libre, elle va être utilisée. On fait ça 5 fois de suite et on augmente les points de FORCE. Si ont veut augmenter l'intelligence, l'idée est la même, mais en plus on va écraser le pointeur vers `incStr()` par l'adresse de `incInt()`
 
 On code appliquant cela est implémenté dans `solve.py`.
 
