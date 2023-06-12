@@ -31,8 +31,9 @@ Les sources des challenges sont données dans le [Github du 404CTF 2023](https:/
 ## Exploitation de binaires
 - [X] [Intro - Je veux la lune !](./PWN/Je_veux_la_lune)
 - [ ] [L'Alchimiste](./PWN/L_alchimiste)
+- [ ] [La Cohue](./PWN/La_cohue)
 - [X] [Cache-cache : le retour](./PWN/Cache_cache_le_retour)
-- [ ] [Un tour de magie](./PWN/Un_tour_de_magie)
+
 
 ## Intelligence artificielle
 - [X] [Intro - De la poésie](./Intelligence_artificielle/De_la_poesie)

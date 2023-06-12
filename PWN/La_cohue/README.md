@@ -13,6 +13,49 @@ Toutes les informations nécéssaires à la résolution de ce challenge sont pr�
 
 ## Solution
 
+On commence par exécuter le fichier pour observer le comportement du programme :
+
+<p align="center"><img src="Execution du programme.png" alt="Execution du programme" width="400"></p>
+
+Après avoir testé les différentes fonctionnalités, on passe à une analyse plus approfondie en décompilant le programme "la_cohue" avec Ghidra. En regardant la liste des fonctions on remaque une fonction `canary()` qui permet d'afficher le flag :
+
+```c
+void canary(void){
+  FILE *__stream;
+  long in_FS_OFFSET;
+  char flag [72];
+  long canary;
+
+  canary = *(long *)(in_FS_OFFSET + 0x28);
+  puts(&DAT_00400b98);
+  __stream = fopen("flag.txt","r");
+  fgets(flag,0x48,__stream);
+  puts(flag);
+  fclose(__stream);
+  if (canary != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return;
+}
+```
+
+Y a plus qu'à trouver un moyen l'appeler. On a un `printf` vulnérable dans l'option `2` du programme : 
+```c
+fgets(user_says,0x40,stdin);
+...
+printf(user_says);
+...
+```
+
+Qui va-nous permettre de faire fuiter la stack, par exemple mettant en entrée la chaîne de caractère `%17$p` on récupère la position du canary dans la stack. Puis avec l'option `1` une autre vulnérabilité va nous permettre d'écrire sur la stack, pour écraser l'adresse de retour de la fonction par l'adresse de la fonction `canary()`.
+
+```c
+fgets(user_says,0x40,stdin);
+gets(user_says);
+```
+
+On code appliquant cela est implémenté dans `solve.py`.
 
 
 ## Flag
