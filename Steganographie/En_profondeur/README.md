@@ -15,8 +15,16 @@ On nous donne le texte suivant :
 
 <p align="center"><img src="Ressource challenge.png" alt="Ressource challenge" width="500"></p>
 
-Le principe utilisé repose sur les [autostéréogrammes](https://fr.wikipedia.org/wiki/Autost%C3%A9r%C3%A9ogramme). Le créateur du challenge a donc appliqué ce principe au texte (stéréogramme ASCII). L'objectif est de superposer le texte de droite et de gauche, puis d'observer les mots/lettres qui se détachent. En effet, dans les deux textes, les espaces ne sont pas exactement au même endroit. Ainsi, on peut identifier des zones où le texte se retrouve superposé à un espace de l'autre côté, rendant les mots lisibles. Ces mots lisibles forment le drapeau recherché.
+Le principe utilisé repose sur les [autostéréogrammes](https://fr.wikipedia.org/wiki/Autost%C3%A9r%C3%A9ogramme). Le créateur du challenge a donc appliqué ce principe au texte (stéréogramme ASCII). Il faut donc superposer le texte de droite et de gauche, puis d'observer les mots qui ressortent. En effet, les deux textes sont quasiment identique, mais quelques espaces ne sont pas exactement au même endroit à droite et à gauche. Ainsi, si on superpose les deux textes, tous les mots se superposent parfaitement sauf quelques mots. Ces mots forment le message recherché.
 
+Voile ce que ca donne :
+<p align="center"><img src="Superposition.png" alt="Superposition" width="500"></p>
+
+On peut distinguer deux messages différents en classant les mots en fonction de leur décalage vers la droite ou vers la gauche dans le texte de droite par rapport au mot du texte de gauche. Cela donne les deux messages suivants :
+- Paris Finlande 15 6 avion
+- Marseille Allemagne 10 34 voiture
+
+Le flag est donc l'un des deux messages.
 
 ## Flag
 
