@@ -14,10 +14,36 @@ Ce n'était pas n'importe quels jeux d'argent qui retenaient Armand prisonnier d
 
 Les tasses de café fumaient encore devant vous, tandis que vous vous prépariez à affronter les défis à venir. Marguerite vous observait avec un mélange d'inquiétude et d'espoir dans ses yeux. Vous aviez maintenant un objectif commun : sauver l'âme tourmentée d'Armand et lui offrir une nouvelle vie.
 
-Gagnez à la roulette décrite dans le contrat ci-joint :
+Gagnez à la roulette décrite dans le contrat ci-joint.
 
 
 ## Solution
+
+Dans ce défi, on nous donne le code Solidity ci-dessous : 
+```Solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract Jeu {
+    bool public isSolved = false;
+    uint public m = 0x7fffffff;
+    uint public a = 12345;
+    uint public c = 1103515245;
+
+    uint private currentState;
+
+    constructor(uint _start) {
+        currentState = _start;
+    }
+
+    function guess(uint _next) public returns (bool) {
+        currentState = (a * currentState + c) % m;
+        isSolved = (_next == currentState) || isSolved;
+        return isSolved;
+    }
+```
+
+Dans ce code, on voit que le contrat est initialisé la valeur _start passer en entrée du constructeur : 
 
 
 <p align="center"><img src="Constructor Arguments.png" alt="Constructor Arguments" width="1000"></p>
