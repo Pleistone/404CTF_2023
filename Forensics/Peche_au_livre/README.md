@@ -14,7 +14,7 @@ Justement, vous avez récemment intercepté des communications de Simone Weil, p
 
 Le fichier fourni est une capture réseau, on commence par l'analyser avec le logiciel Wireshark : 
 
-<p align="center"><img src="Echange HTTP.png" alt="Echange HTTP" width="500"></p>
+<p align="center"><img src="Echange HTTP.png" alt="Echange HTTP" width="700"></p>
 
 On constate qu'il s'agit d'un échange HTTP qui a été capturé.
 Ce dernier n'est donc pas chiffré, on peut ainsi extraire le contenu de cet échange, en allant dans le menu `Fichier > Exporter Objets > HTTP`.
